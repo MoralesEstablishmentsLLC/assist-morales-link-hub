@@ -7,46 +7,11 @@ import { ExternalLink, Building2, Globe, Users } from "lucide-react";
 const ClientList = () => {
   const clients = [
     {
-      name: "TechFlow Solutions",
-      industry: "Technology",
-      description: "Custom software development and IT consulting services",
-      website: "techflow-solutions.com",
-      services: ["Web Development", "IT Consulting"]
-    },
-    {
-      name: "Green Valley Organics",
-      industry: "Agriculture",
-      description: "Organic farming and sustainable agriculture products",
-      website: "greenvalleyorganics.com",
-      services: ["E-commerce", "Digital Marketing"]
-    },
-    {
-      name: "Metro Legal Partners",
-      industry: "Legal Services",
-      description: "Full-service law firm specializing in business and corporate law",
-      website: "metrolegalpartners.com",
-      services: ["Professional Website", "SEO"]
-    },
-    {
-      name: "Artisan Coffee Roasters",
-      industry: "Food & Beverage",
-      description: "Premium coffee roasting and specialty beverage company",
-      website: "artisancoffeeroasters.com",
-      services: ["Brand Development", "Online Store"]
-    },
-    {
-      name: "NextGen Fitness",
-      industry: "Health & Wellness",
-      description: "Modern fitness center with personal training services",
-      website: "nextgenfitness.com",
-      services: ["Booking System", "Member Portal"]
-    },
-    {
-      name: "Creative Design Studio",
-      industry: "Design & Marketing",
-      description: "Full-service creative agency for branding and marketing",
-      website: "creativedesignstudio.com",
-      services: ["Portfolio Website", "Client Management"]
+      name: "Private Practice Therapy",
+      industry: "Healthcare & Mental Health",
+      description: "Experienced therapist providing comprehensive mental health services with multiple therapy approaches including CBT, attachment-based therapy, and family counseling",
+      website: "calendar.moralesassist.com",
+      services: ["Online Booking System", "Appointment Management", "Contact Forms"]
     }
   ];
 
