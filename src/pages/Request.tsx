@@ -8,6 +8,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Send, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const Request = () => {
   const [formData, setFormData] = useState({
@@ -21,6 +23,8 @@ const Request = () => {
     description: "",
     services: [] as string[]
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const serviceOptions = [
     "Web Development",
@@ -42,10 +46,46 @@ const Request = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-request-email', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Request Sent!",
+        description: "Thank you for your request. We'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        projectType: "",
+        budget: "",
+        timeline: "",
+        description: "",
+        services: []
+      });
+    } catch (error: any) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: "There was an error sending your request. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -189,9 +229,9 @@ const Request = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90">
+                  <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90" disabled={isSubmitting}>
                     <Send className="w-4 h-4 mr-2" />
-                    Submit Request
+                    {isSubmitting ? "Sending..." : "Submit Request"}
                   </Button>
                 </form>
               </CardContent>
