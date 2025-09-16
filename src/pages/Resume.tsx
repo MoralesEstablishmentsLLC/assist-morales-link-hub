@@ -2,10 +2,8 @@ import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Phone, MapPin, Globe } from "lucide-react";
-
 const Resume = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -29,11 +27,12 @@ const Resume = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-primary" />
-                  <span>contact@moralesassist.com</span>
+                  <span>jalen@moralesassist.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-primary" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+1 (559) 722-6123
+                </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-primary" />
@@ -101,7 +100,7 @@ const Resume = () => {
                   <h4 className="font-semibold text-foreground mb-2">Technical</h4>
                   <ul className="space-y-1 text-muted-foreground">
                     <li>• Web Development</li>
-                    <li>• Digital Strategy</li>
+                    <li>• Python, React, Java</li>
                     <li>• UI/UX Design</li>
                     <li>• SEO Optimization</li>
                   </ul>
@@ -129,8 +128,6 @@ const Resume = () => {
           </Card>
         </div>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Resume;
