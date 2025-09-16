@@ -78,7 +78,7 @@ const Resume = () => {
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-foreground">UC Merced</h3>
+                <h3 className="text-lg font-semibold text-foreground">Bioengineering</h3>
                 <p className="text-primary font-medium">Freelance • 2018 - 2020</p>
                 <ul className="mt-2 space-y-1 text-muted-foreground">
                   <li>• Designed and developed responsive websites for various clients</li>
