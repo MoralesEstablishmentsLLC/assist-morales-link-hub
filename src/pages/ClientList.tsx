@@ -12,6 +12,13 @@ const ClientList = () => {
       description: "Experienced therapist providing comprehensive mental health services with multiple therapy approaches including CBT, attachment-based therapy, and family counseling",
       website: "calendar.moralesassist.com",
       services: ["Online Booking System", "Appointment Management", "Contact Forms"]
+    },
+    {
+      name: "Confidential Investigations",
+      industry: "Security & Investigation",
+      description: "Professional private investigation services providing discreet and confidential solutions for personal and corporate clients",
+      website: "Coming Soon",
+      services: ["Secure Contact Forms", "Client Portal", "Privacy-Focused Design"]
     }
   ];
 
@@ -71,17 +78,24 @@ const ClientList = () => {
                   </div>
                 </div>
 
-                <a 
-                  href={`https://${client.website}`} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
-                  <Button variant="outline" size="sm" className="w-full">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Visit Website
+                {client.website !== "Coming Soon" ? (
+                  <a 
+                    href={`https://${client.website}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-full"
+                  >
+                    <Button variant="outline" size="sm" className="w-full">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Visit Website
+                    </Button>
+                  </a>
+                ) : (
+                  <Button variant="outline" size="sm" className="w-full" disabled>
+                    <Globe className="w-4 h-4 mr-2" />
+                    Website Coming Soon
                   </Button>
-                </a>
+                )}
               </CardContent>
             </Card>
           ))}
