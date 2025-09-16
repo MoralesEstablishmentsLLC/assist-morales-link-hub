@@ -40,7 +40,7 @@ const Resume = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Globe className="w-4 h-4 text-primary" />
-                  <span>moralesassist.com</span>
+                  <span>www.linkedin.com/in/jalenjm05</span>
                 </div>
               </div>
             </CardContent>
@@ -81,7 +81,7 @@ const Resume = () => {
                 <h3 className="text-lg font-semibold text-foreground">Bioengineering</h3>
                 <p className="text-primary font-medium">Freelance • 2018 - 2020</p>
                 <ul className="mt-2 space-y-1 text-muted-foreground">
-                  <li>• Designed and developed responsive websites for various clients</li>
+                  <li>• Lab Experience in all sciences</li>
                   <li>• Implemented modern web technologies and best practices</li>
                   <li>• Provided ongoing maintenance and support services</li>
                 </ul>
