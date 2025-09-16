@@ -5,15 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from "lucide-react";
-
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -61,12 +58,7 @@ const Contact = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Message *</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Tell us about your project or how we can help you..."
-                      className="min-h-[150px]"
-                      required
-                    />
+                    <Textarea id="message" placeholder="Tell us about your project or how we can help you..." className="min-h-[150px]" required />
                   </div>
 
                   <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90">
@@ -90,7 +82,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground">Email</h3>
-                        <p className="text-muted-foreground">contact@moralesassist.com</p>
+                        <p className="text-muted-foreground">jalen@moralesassist.com</p>
                         <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
                       </div>
                     </div>
@@ -105,8 +97,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground">Phone</h3>
-                        <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                        <p className="text-sm text-muted-foreground mt-1">Monday - Friday, 9AM - 6PM EST</p>
+                        <p className="text-muted-foreground">+1 (559) 722-6123</p>
+                        <p className="text-sm text-muted-foreground mt-1">Monday - Friday, 10AM - 8PM </p>
                       </div>
                     </div>
                   </CardContent>
@@ -135,7 +127,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground">Business Hours</h3>
-                        <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                        <p className="text-muted-foreground">Monday - Friday: 10:00 AM - 8:00 PM</p>
                         <p className="text-sm text-muted-foreground mt-1">Weekend support available for urgent matters</p>
                       </div>
                     </div>
@@ -185,8 +177,6 @@ const Contact = () => {
           </Card>
         </div>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
