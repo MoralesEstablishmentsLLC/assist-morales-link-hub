@@ -144,8 +144,9 @@ const Index = () => {
               <Card className="shadow-card text-center">
                 <CardContent className="pt-6">
                   <Target className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground">98%</h3>
-                  <p className="text-muted-foreground">Success Rate</p>
+                  <h3 className="text-2xl font-bold text-foreground">100
+%</h3>
+                  <p className="text-muted-foreground">Accurate Results</p>
                 </CardContent>
               </Card>
               
