@@ -71,10 +71,17 @@ const ClientList = () => {
                   </div>
                 </div>
 
-                <Button variant="outline" size="sm" className="w-full mt-4">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Visit Website
-                </Button>
+                <a 
+                  href={`https://${client.website}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button variant="outline" size="sm" className="w-full">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Visit Website
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}
