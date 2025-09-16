@@ -67,7 +67,7 @@ const Resume = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-foreground">Founder & Digital Consultant</h3>
+                <h3 className="text-lg font-semibold text-foreground">Digital Consultant</h3>
                 <p className="text-primary font-medium">Morales Assist • 2020 - Present</p>
                 <ul className="mt-2 space-y-1 text-muted-foreground">
                   <li>• Provide comprehensive digital solutions for small businesses and companies</li>
