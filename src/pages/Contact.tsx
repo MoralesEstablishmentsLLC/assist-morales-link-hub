@@ -82,7 +82,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground">Email</h3>
-                        <p className="text-muted-foreground">jalen@moralesassist.com</p>
+                        
                         <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
                       </div>
                     </div>
