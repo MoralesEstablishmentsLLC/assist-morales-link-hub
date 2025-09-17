@@ -2,8 +2,14 @@ import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Bot, Code, Database, Globe, MessageSquare, Zap, Smartphone, Shield, Cloud, Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
+import CodeEditor from "@/components/demos/CodeEditor";
+import AnimationDemo from "@/components/demos/AnimationDemo";
+import DatabaseDemo from "@/components/demos/DatabaseDemo";
+import ResponsiveDemo from "@/components/demos/ResponsiveDemo";
+import AIDemo from "@/components/demos/AIDemo";
 
 const Features = () => {
   const features = [
@@ -156,8 +162,48 @@ const Features = () => {
           </div>
         </section>
 
-        {/* Showcase Projects */}
+        {/* Interactive Demos */}
         <section className="mb-20 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <h2 className="text-3xl font-bold text-center mb-12">Interactive Feature Demos</h2>
+          <p className="text-center text-muted-foreground mb-8 max-w-3xl mx-auto">
+            Experience our technical capabilities firsthand with these interactive demonstrations
+          </p>
+          
+          <Tabs defaultValue="ai" className="w-full">
+            <TabsList className="grid w-full grid-cols-5">
+              <TabsTrigger value="ai">AI Assistant</TabsTrigger>
+              <TabsTrigger value="code">Code Editor</TabsTrigger>
+              <TabsTrigger value="database">Database</TabsTrigger>
+              <TabsTrigger value="animation">Animations</TabsTrigger>
+              <TabsTrigger value="responsive">Responsive</TabsTrigger>
+            </TabsList>
+            
+            <div className="mt-8 flex justify-center">
+              <TabsContent value="ai" className="w-full flex justify-center">
+                <AIDemo />
+              </TabsContent>
+              
+              <TabsContent value="code" className="w-full flex justify-center">
+                <CodeEditor />
+              </TabsContent>
+              
+              <TabsContent value="database" className="w-full flex justify-center">
+                <DatabaseDemo />
+              </TabsContent>
+              
+              <TabsContent value="animation" className="w-full flex justify-center">
+                <AnimationDemo />
+              </TabsContent>
+              
+              <TabsContent value="responsive" className="w-full flex justify-center">
+                <ResponsiveDemo />
+              </TabsContent>
+            </div>
+          </Tabs>
+        </section>
+
+        {/* Showcase Projects */}
+        <section className="mb-20 animate-fade-in" style={{ animationDelay: "0.6s" }}>
           <h2 className="text-3xl font-bold text-center mb-12">AI Bot Showcase</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {showcaseProjects.map((project, index) => (
@@ -187,7 +233,7 @@ const Features = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center bg-card rounded-2xl p-12 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+        <section className="text-center bg-card rounded-2xl p-12 animate-fade-in" style={{ animationDelay: "0.8s" }}>
           <h2 className="text-3xl font-bold mb-4">Ready to Build Something Amazing?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Let's discuss how we can leverage these technologies to create custom solutions for your business needs.
