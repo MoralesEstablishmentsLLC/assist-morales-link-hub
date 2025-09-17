@@ -33,17 +33,17 @@ const EditSite = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-hero text-white">
       <Navigation />
       
-      {/* Content Section with Gray Background */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted min-h-screen" style={{backgroundColor: 'hsl(0 0% 96.1%)'}}>
+      {/* Content Section with Dark Background like Hero */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-hero text-white min-h-screen">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Edit Your Site
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-white/90 max-w-2xl mx-auto">
               Welcome back! Submit changes to your existing website or request new features. 
               Our team will review and implement your updates promptly.
             </p>
