@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Send, Bot, User } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 interface Message {
   id: string;
@@ -26,7 +27,10 @@ const Chatbot = () => {
   ]);
   const [inputText, setInputText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const [userMessageCount, setUserMessageCount] = useState(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const MESSAGE_LIMIT = 15;
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -106,6 +110,11 @@ const Chatbot = () => {
   const handleSendMessage = async () => {
     if (!inputText.trim()) return;
 
+    // Check if user has reached message limit
+    if (userMessageCount >= MESSAGE_LIMIT) {
+      return;
+    }
+
     const userMessage: Message = {
       id: Date.now().toString(),
       text: inputText,
@@ -116,12 +125,24 @@ const Chatbot = () => {
     setMessages(prev => [...prev, userMessage]);
     setInputText("");
     setIsTyping(true);
+    setUserMessageCount(prev => prev + 1);
 
+    // Check if this was the last allowed message
+    const newCount = userMessageCount + 1;
+    
     // Simulate bot thinking time
     setTimeout(() => {
+      let botResponseText;
+      
+      if (newCount >= MESSAGE_LIMIT) {
+        botResponseText = "You've reached your 15-message limit for this session. For more detailed assistance, please contact our team directly. We'd be happy to help with your project!";
+      } else {
+        botResponseText = generateBotResponse(inputText);
+      }
+
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: generateBotResponse(inputText),
+        text: botResponseText,
         sender: 'bot',
         timestamp: new Date(),
         isTyping: true,
@@ -216,23 +237,39 @@ const Chatbot = () => {
             </div>
             
             <div className="border-t p-4">
-              <div className="flex gap-2">
-                <Input
-                  value={inputText}
-                  onChange={(e) => setInputText(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  placeholder="Ask me about our services, pricing, or how to get started..."
-                  className="flex-1"
-                  disabled={isTyping}
-                />
-                <Button 
-                  onClick={handleSendMessage} 
-                  disabled={!inputText.trim() || isTyping}
-                  className="bg-gradient-primary hover:opacity-90"
-                >
-                  <Send className="w-4 h-4" />
-                </Button>
-              </div>
+              {userMessageCount >= MESSAGE_LIMIT ? (
+                <div className="text-center p-4">
+                  <p className="text-muted-foreground mb-4">
+                    You've reached your message limit. For more assistance, please contact us directly.
+                  </p>
+                  <Link to="/contact">
+                    <Button className="bg-gradient-primary hover:opacity-90">
+                      Contact Us
+                    </Button>
+                  </Link>
+                </div>
+              ) : (
+                <div className="flex gap-2">
+                  <Input
+                    value={inputText}
+                    onChange={(e) => setInputText(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    placeholder="Ask me about our services, pricing, or how to get started..."
+                    className="flex-1"
+                    disabled={isTyping}
+                  />
+                  <Button 
+                    onClick={handleSendMessage} 
+                    disabled={!inputText.trim() || isTyping}
+                    className="bg-gradient-primary hover:opacity-90"
+                  >
+                    <Send className="w-4 h-4" />
+                  </Button>
+                  <div className="text-xs text-muted-foreground self-center ml-2">
+                    {MESSAGE_LIMIT - userMessageCount} messages left
+                  </div>
+                </div>
+              )}
             </div>
           </CardContent>
         </Card>
