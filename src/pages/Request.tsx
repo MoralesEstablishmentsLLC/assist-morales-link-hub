@@ -90,13 +90,13 @@ const Request = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-black text-white">
       <Navigation />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-4">Request Services</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <h1 className="text-4xl font-bold text-white mb-4">Request Services</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to take your business to the next level? Fill out the form below and let's discuss 
             how we can help you succeed in the digital world.
           </p>
@@ -104,7 +104,7 @@ const Request = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <Card className="shadow-card">
+            <Card className="shadow-card bg-gray-900 border-gray-700">
               <CardHeader>
                 <CardTitle className="text-primary">Project Details</CardTitle>
               </CardHeader>
@@ -239,7 +239,7 @@ const Request = () => {
           </div>
 
           <div className="space-y-6">
-            <Card className="shadow-card">
+            <Card className="shadow-card bg-gray-900 border-gray-700">
               <CardHeader>
                 <CardTitle className="text-primary">What Happens Next?</CardTitle>
               </CardHeader>
@@ -268,7 +268,7 @@ const Request = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card bg-accent">
+            <Card className="shadow-card bg-gray-800 border-gray-700">
               <CardContent className="py-6">
                 <h3 className="font-semibold text-accent-foreground mb-2">Need Help?</h3>
                 <p className="text-sm text-muted-foreground mb-4">
