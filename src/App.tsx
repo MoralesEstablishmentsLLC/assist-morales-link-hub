@@ -8,6 +8,7 @@ import Resume from "./pages/Resume";
 import ClientList from "./pages/ClientList";
 import Request from "./pages/Request";
 import Contact from "./pages/Contact";
+import Chatbot from "./pages/Chatbot";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/clients" element={<ClientList />} />
           <Route path="/request" element={<Request />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/chatbot" element={<Chatbot />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

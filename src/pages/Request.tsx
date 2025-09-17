@@ -273,8 +273,8 @@ const Request = () => {
                 <p className="text-sm text-muted-foreground mb-4">
                   Have questions about our services? Contact us directly.
                 </p>
-                <Button variant="outline" size="sm" className="w-full">
-                  Contact Support
+                <Button variant="outline" size="sm" className="w-full" asChild>
+                  <a href="/chatbot">Contact Support</a>
                 </Button>
               </CardContent>
             </Card>
