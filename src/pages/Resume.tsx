@@ -10,10 +10,7 @@ const Resume = () => {
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-foreground mb-4">Personal Resume</h1>
           <div className="flex flex-wrap gap-4 items-center">
-            <Button className="bg-gradient-primary hover:opacity-90">
-              <Download className="w-4 h-4 mr-2" />
-              Download PDF
-            </Button>
+            
           </div>
         </div>
 
