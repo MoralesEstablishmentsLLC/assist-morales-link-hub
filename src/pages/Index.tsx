@@ -205,7 +205,7 @@ const Index = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Our team is ready to help answer your questions and guide you through our services.
           </p>
-          <Link to="/contact">
+          <Link to="/chatbot">
             <Button size="lg" className="text-lg px-12 py-4 h-auto shadow-elegant">
               Contact Support
               <ArrowRight className="ml-3 w-6 h-6" />
