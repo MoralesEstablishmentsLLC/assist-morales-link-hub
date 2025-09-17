@@ -94,7 +94,7 @@ const Request = () => {
       <Navigation />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-12 text-center">
+        <div className="mb-12 text-center animate-fade-in">
           <h1 className="text-4xl font-bold text-white mb-4">Request Services</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to take your business to the next level? Fill out the form below and let's discuss 
@@ -103,7 +103,7 @@ const Request = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 animate-fade-in [animation-delay:200ms]">
             <Card className="shadow-card bg-gray-900 border-gray-800">
               <CardHeader>
                 <CardTitle className="text-blue-400">Project Details</CardTitle>
@@ -240,7 +240,7 @@ const Request = () => {
           </div>
 
           <div className="space-y-6">
-            <Card className="shadow-card bg-gray-900 border-gray-800">
+            <Card className="shadow-card bg-gray-900 border-gray-800 animate-fade-in [animation-delay:400ms]">
               <CardHeader>
                 <CardTitle className="text-blue-400">What Happens Next?</CardTitle>
               </CardHeader>
@@ -269,7 +269,7 @@ const Request = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card bg-gray-900 border-gray-800">
+            <Card className="shadow-card bg-gray-900 border-gray-800 animate-fade-in [animation-delay:600ms]">
               <CardContent className="py-6">
                 <h3 className="font-semibold text-white mb-2">Need Help?</h3>
                 <p className="text-sm text-gray-300 mb-4">
