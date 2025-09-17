@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Bot, Code, Database, Globe, MessageSquare, Zap, Smartphone, Shield, Cloud, Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
-import EmailDemo from "@/components/demos/EmailDemo";
+import { EmailDemo } from "@/components/demos/EmailDemo";
 import AnimationDemo from "@/components/demos/AnimationDemo";
 import ResponsiveDemo from "@/components/demos/ResponsiveDemo";
 
