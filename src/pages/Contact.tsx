@@ -152,25 +152,25 @@ const Contact = () => {
         </div>
 
         <div className="mt-16">
-          <Card className="shadow-card">
+          <Card className="shadow-card bg-dark-section">
             <CardContent className="py-12 text-center">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-2xl font-bold text-blue-heading mb-4">Frequently Asked Questions</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 text-left">
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">How quickly can you start my project?</h4>
-                  <p className="text-muted-foreground text-sm">Projects are started once a price agreement is reached and signed.</p>
+                  <h4 className="font-semibold text-white mb-2">How quickly can you start my project?</h4>
+                  <p className="text-gray-300 text-sm">Projects are started once a price agreement is reached and signed.</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Do you work with businesses outside the US?</h4>
-                  <p className="text-muted-foreground text-sm">Yes! We work with clients worldwide and have experience with international businesses across multiple time zones.</p>
+                  <h4 className="font-semibold text-white mb-2">Do you work with businesses outside the US?</h4>
+                  <p className="text-gray-300 text-sm">Yes! We work with clients worldwide and have experience with international businesses across multiple time zones.</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">What is your typical project timeline?</h4>
-                  <p className="text-muted-foreground text-sm">Project timelines vary based on complexity, but most websites are completed within 4-8 weeks from start to finish.</p>
+                  <h4 className="font-semibold text-white mb-2">What is your typical project timeline?</h4>
+                  <p className="text-gray-300 text-sm">Project timelines vary based on complexity, but most websites are completed within 4-8 weeks from start to finish.</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Do you provide ongoing support?</h4>
-                  <p className="text-muted-foreground text-sm">Absolutely! We offer various maintenance packages and ongoing support options to keep your digital presence running smoothly.</p>
+                  <h4 className="font-semibold text-white mb-2">Do you provide ongoing support?</h4>
+                  <p className="text-gray-300 text-sm">Absolutely! We offer various maintenance packages and ongoing support options to keep your digital presence running smoothly.</p>
                 </div>
               </div>
             </CardContent>
