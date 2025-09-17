@@ -6,15 +6,15 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Send, CheckCircle, Clock, Code2, Zap, Shield } from 'lucide-react';
-
 export const EmailDemo = () => {
   const [recipient, setRecipient] = useState('');
   const [subject, setSubject] = useState('Welcome to our platform!');
   const [content, setContent] = useState('Thank you for joining us. We\'re excited to have you on board!');
   const [isSending, setIsSending] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSendEmail = async () => {
     if (!recipient || !subject || !content) {
       toast({
@@ -24,30 +24,25 @@ export const EmailDemo = () => {
       });
       return;
     }
-
     setIsSending(true);
-    
+
     // Simulate sending delay
     setTimeout(() => {
       setIsSending(false);
       setEmailSent(true);
       toast({
         title: "Email Sent Successfully",
-        description: "Your email has been delivered with Resend.",
+        description: "Your email has been delivered with Resend."
       });
     }, 2000);
   };
-
-  return (
-    <Card className="w-full max-w-4xl mx-auto">
+  return <Card className="w-full max-w-4xl mx-auto">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Mail className="h-5 w-5 text-primary" />
           Resend Email Service
         </CardTitle>
-        <CardDescription>
-          Reliable email delivery for developers. Built for scale, designed for simplicity.
-        </CardDescription>
+        <CardDescription>Reliable email delivery for businesses. Built for scale and designed for simplicity.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
         {/* How Resend Works */}
@@ -74,40 +69,14 @@ export const EmailDemo = () => {
               </p>
             </div>
             
-            <div className="p-4 bg-muted rounded-lg">
-              <div className="flex items-center gap-2 mb-2">
-                <Shield className="h-5 w-5 text-primary" />
-                <span className="font-medium">High Deliverability</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Automatically configured SPF, DKIM, and DMARC for maximum inbox placement.
-              </p>
-            </div>
+            
           </div>
         </div>
 
         {/* Code Example */}
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Code Example</h3>
-          <div className="bg-slate-900 text-slate-100 p-4 rounded-lg text-sm font-mono overflow-x-auto">
-            <div className="text-green-400">// Install: npm install resend</div>
-            <br />
-            <div className="text-blue-400">import</div> {`{ Resend } `}<div className="text-blue-400">from</div> <div className="text-yellow-300">'resend'</div>;
-            <br /><br />
-            <div className="text-blue-400">const</div> resend = <div className="text-blue-400">new</div> <div className="text-purple-400">Resend</div>(<div className="text-yellow-300">'re_123456789'</div>);
-            <br /><br />
-            <div className="text-blue-400">await</div> resend.emails.<div className="text-purple-400">send</div>({`{`}
-            <br />
-            &nbsp;&nbsp;from: <div className="text-yellow-300">'you@yourdomain.com'</div>,
-            <br />
-            &nbsp;&nbsp;to: <div className="text-yellow-300">'user@gmail.com'</div>,
-            <br />
-            &nbsp;&nbsp;subject: <div className="text-yellow-300">'Hello World'</div>,
-            <br />
-            &nbsp;&nbsp;html: <div className="text-yellow-300">'&lt;h1&gt;Welcome!&lt;/h1&gt;'</div>
-            <br />
-            {`});`}
-          </div>
+          
+          
         </div>
 
         {/* Interactive Demo */}
@@ -116,56 +85,33 @@ export const EmailDemo = () => {
           <div className="grid gap-4">
             <div className="space-y-2">
               <label className="text-sm font-medium">To</label>
-              <Input
-                type="email"
-                placeholder="recipient@example.com"
-                value={recipient}
-                onChange={(e) => setRecipient(e.target.value)}
-              />
+              <Input type="email" placeholder="recipient@example.com" value={recipient} onChange={e => setRecipient(e.target.value)} />
             </div>
             
             <div className="space-y-2">
               <label className="text-sm font-medium">Subject</label>
-              <Input
-                placeholder="Email subject"
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-              />
+              <Input placeholder="Email subject" value={subject} onChange={e => setSubject(e.target.value)} />
             </div>
             
             <div className="space-y-2">
               <label className="text-sm font-medium">Content</label>
-              <Textarea
-                placeholder="Email content..."
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
-                className="min-h-[100px]"
-              />
+              <Textarea placeholder="Email content..." value={content} onChange={e => setContent(e.target.value)} className="min-h-[100px]" />
             </div>
 
-            <Button 
-              onClick={handleSendEmail} 
-              disabled={isSending}
-              className="w-full"
-            >
-              {isSending ? (
-                <>
+            <Button onClick={handleSendEmail} disabled={isSending} className="w-full">
+              {isSending ? <>
                   <Clock className="h-4 w-4 mr-2 animate-spin" />
                   Sending via Resend...
-                </>
-              ) : (
-                <>
+                </> : <>
                   <Send className="h-4 w-4 mr-2" />
                   Send Email
-                </>
-              )}
+                </>}
             </Button>
           </div>
         </div>
 
         {/* Result */}
-        {emailSent && (
-          <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+        {emailSent && <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
             <div className="flex items-center gap-2 text-green-700">
               <CheckCircle className="h-5 w-5" />
               <span className="font-medium">Email sent successfully!</span>
@@ -173,31 +119,18 @@ export const EmailDemo = () => {
             <p className="text-sm text-green-600 mt-1">
               In a real application, this would be sent via Resend's API to {recipient}
             </p>
-          </div>
-        )}
+          </div>}
 
         {/* Features */}
         <div className="space-y-4">
           <h3 className="text-lg font-semibold">Key Features</h3>
           <div className="grid gap-2">
-            {[
-              "99.9% uptime SLA",
-              "React Email templates",
-              "Webhooks for tracking",
-              "Analytics dashboard",
-              "Custom domains",
-              "Bulk sending",
-              "Rate limiting protection",
-              "GDPR compliant"
-            ].map((feature, index) => (
-              <div key={index} className="flex items-center gap-2 text-sm">
+            {["99.9% uptime SLA", "React Email templates", "Webhooks for tracking", "Analytics dashboard", "Custom domains", "Bulk sending", "Rate limiting protection", "GDPR compliant"].map((feature, index) => <div key={index} className="flex items-center gap-2 text-sm">
                 <CheckCircle className="h-4 w-4 text-green-500" />
                 <span>{feature}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </CardContent>
-    </Card>
-  );
+    </Card>;
 };
