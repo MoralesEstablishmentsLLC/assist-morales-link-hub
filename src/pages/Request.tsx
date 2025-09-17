@@ -112,7 +112,7 @@ const Request = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
+                      <Label htmlFor="name" className="text-blue-400">Full Name *</Label>
                       <Input
                         id="name"
                         value={formData.name}
@@ -121,7 +121,7 @@ const Request = () => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email Address *</Label>
+                      <Label htmlFor="email" className="text-blue-400">Email Address *</Label>
                       <Input
                         id="email"
                         type="email"
@@ -134,7 +134,7 @@ const Request = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="company">Company/Business Name</Label>
+                      <Label htmlFor="company" className="text-blue-400">Company/Business Name</Label>
                       <Input
                         id="company"
                         value={formData.company}
@@ -142,7 +142,7 @@ const Request = () => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
+                      <Label htmlFor="phone" className="text-blue-400">Phone Number</Label>
                       <Input
                         id="phone"
                         type="tel"
@@ -154,7 +154,7 @@ const Request = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="projectType">Project Type</Label>
+                      <Label htmlFor="projectType" className="text-blue-400">Project Type</Label>
                       <Select onValueChange={(value) => setFormData(prev => ({ ...prev, projectType: value }))}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select project type" />
@@ -170,7 +170,7 @@ const Request = () => {
                       </Select>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="budget">Budget Range</Label>
+                      <Label htmlFor="budget" className="text-blue-400">Budget Range</Label>
                       <Select onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select budget range" />
@@ -186,7 +186,7 @@ const Request = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="timeline">Preferred Timeline</Label>
+                    <Label htmlFor="timeline" className="text-blue-400">Preferred Timeline</Label>
                     <Select onValueChange={(value) => setFormData(prev => ({ ...prev, timeline: value }))}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select timeline" />
@@ -202,7 +202,7 @@ const Request = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <Label>Services Needed (select all that apply)</Label>
+                    <Label className="text-blue-400">Services Needed (select all that apply)</Label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {serviceOptions.map((service) => (
                         <div key={service} className="flex items-center space-x-2">
@@ -211,14 +211,14 @@ const Request = () => {
                             checked={formData.services.includes(service)}
                             onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)}
                           />
-                          <Label htmlFor={service} className="text-sm">{service}</Label>
+                          <Label htmlFor={service} className="text-sm text-white">{service}</Label>
                         </div>
                       ))}
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="description">Project Description *</Label>
+                    <Label htmlFor="description" className="text-blue-400">Project Description *</Label>
                     <Textarea
                       id="description"
                       placeholder="Please describe your project, goals, and any specific requirements..."
