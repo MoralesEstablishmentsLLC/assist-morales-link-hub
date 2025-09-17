@@ -104,9 +104,9 @@ const Request = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <Card className="shadow-card bg-gray-900 border-gray-700">
+            <Card className="shadow-card bg-gray-900 border-gray-800">
               <CardHeader>
-                <CardTitle className="text-primary">Project Details</CardTitle>
+                <CardTitle className="text-blue-400">Project Details</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -239,39 +239,39 @@ const Request = () => {
           </div>
 
           <div className="space-y-6">
-            <Card className="shadow-card bg-gray-900 border-gray-700">
+            <Card className="shadow-card bg-gray-900 border-gray-800">
               <CardHeader>
-                <CardTitle className="text-primary">What Happens Next?</CardTitle>
+                <CardTitle className="text-blue-400">What Happens Next?</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5" />
                   <div>
-                    <h4 className="font-medium text-foreground">Initial Review</h4>
-                    <p className="text-sm text-muted-foreground">We'll review your request within 24 hours</p>
+                    <h4 className="font-medium text-white">Initial Review</h4>
+                    <p className="text-sm text-gray-300">We'll review your request within 24 hours</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5" />
                   <div>
-                    <h4 className="font-medium text-foreground">Consultation Call</h4>
-                    <p className="text-sm text-muted-foreground">Schedule a free consultation to discuss details</p>
+                    <h4 className="font-medium text-white">Consultation Call</h4>
+                    <p className="text-sm text-gray-300">Schedule a free consultation to discuss details</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5" />
                   <div>
-                    <h4 className="font-medium text-foreground">Custom Proposal</h4>
-                    <p className="text-sm text-muted-foreground">Receive a tailored proposal for your project</p>
+                    <h4 className="font-medium text-white">Custom Proposal</h4>
+                    <p className="text-sm text-gray-300">Receive a tailored proposal for your project</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="shadow-card bg-gray-800 border-gray-700">
+            <Card className="shadow-card bg-gray-900 border-gray-800">
               <CardContent className="py-6">
-                <h3 className="font-semibold text-accent-foreground mb-2">Need Help?</h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <h3 className="font-semibold text-white mb-2">Need Help?</h3>
+                <p className="text-sm text-gray-300 mb-4">
                   Have questions about our services? Contact us directly.
                 </p>
                 <Button variant="outline" size="sm" className="w-full" asChild>
