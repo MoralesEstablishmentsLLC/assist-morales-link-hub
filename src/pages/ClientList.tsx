@@ -1,10 +1,13 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Building2, Globe, Users } from "lucide-react";
+import { ExternalLink, Building2, Globe, Users, X } from "lucide-react";
 
 const ClientList = () => {
+  const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
+  
   const clients = [
     {
       name: "Private Practice Therapy",
@@ -30,6 +33,9 @@ const ClientList = () => {
   ];
 
   const industries = [...new Set(clients.map(client => client.industry))];
+  const filteredClients = selectedIndustry 
+    ? clients.filter(client => client.industry === selectedIndustry)
+    : clients;
 
   return (
     <div className="min-h-screen bg-background">
@@ -37,15 +43,36 @@ const ClientList = () => {
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12 text-center bg-primary p-8 rounded-lg text-primary-foreground">
-          <h1 className="text-4xl font-bold text-blue-300 mb-4">Client Directory</h1>
+          <h1 className="text-4xl font-bold text-blue-300 mb-4">
+            {selectedIndustry ? `${selectedIndustry} Clients` : "Client Directory"}
+          </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover our network of diverse businesses and companies across various industries. 
-            Each client represents a successful partnership in digital transformation.
+            {selectedIndustry 
+              ? `Explore our clients in the ${selectedIndustry} industry.`
+              : "Discover our network of diverse businesses and companies across various industries. Each client represents a successful partnership in digital transformation."
+            }
           </p>
+          
+          {selectedIndustry && (
+            <Button 
+              variant="secondary" 
+              size="sm" 
+              className="mt-4"
+              onClick={() => setSelectedIndustry(null)}
+            >
+              <X className="w-4 h-4 mr-2" />
+              Show All Clients
+            </Button>
+          )}
           
           <div className="mt-8 flex flex-wrap justify-center gap-2">
             {industries.map((industry) => (
-              <Badge key={industry} variant="secondary" className="text-sm">
+              <Badge 
+                key={industry} 
+                variant={selectedIndustry === industry ? "default" : "secondary"} 
+                className="text-sm cursor-pointer hover:bg-accent transition-colors"
+                onClick={() => setSelectedIndustry(industry === selectedIndustry ? null : industry)}
+              >
                 {industry}
               </Badge>
             ))}
@@ -53,7 +80,7 @@ const ClientList = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {clients.map((client, index) => (
+          {filteredClients.map((client, index) => (
             <Card key={index} className="shadow-card hover:shadow-elegant transition-shadow duration-300">
               <CardHeader>
                 <div className="flex items-start justify-between">
