@@ -197,6 +197,22 @@ const Index = () => {
           </Card>
         </div>
       </section>
+
+      {/* Contact Support Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted">
+        <div className="max-w-2xl mx-auto text-center">
+          <h3 className="text-3xl font-bold text-foreground mb-4">Need Immediate Support?</h3>
+          <p className="text-lg text-muted-foreground mb-8">
+            Our team is ready to help answer your questions and guide you through our services.
+          </p>
+          <Link to="/contact">
+            <Button size="lg" className="text-lg px-12 py-4 h-auto shadow-elegant">
+              Contact Support
+              <ArrowRight className="ml-3 w-6 h-6" />
+            </Button>
+          </Link>
+        </div>
+      </section>
     </div>;
 };
 export default Index;
