@@ -39,7 +39,7 @@ const Chatbot = () => {
     
     // Website services and features
     if (message.includes('service') || message.includes('what do you do')) {
-      return "We offer comprehensive digital solutions including: Web Development, E-commerce Solutions, Digital Marketing, SEO Optimization, Branding & Design, Business Consulting, Mobile App Development, and Database Management. What type of project are you interested in?";
+      return "We offer comprehensive digital solutions including: Web Development, E-commerce Solutions, Digital Marketing, SEO Optimization, Branding & Design, Business Consulting, Mobile App Development, Database Management, and AI Integration. What type of project are you interested in?";
     }
     
     // Quote estimation logic

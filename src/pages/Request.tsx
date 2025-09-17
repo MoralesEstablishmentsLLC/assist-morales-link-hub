@@ -34,7 +34,8 @@ const Request = () => {
     "Branding & Design",
     "Business Consulting",
     "Mobile App Development",
-    "Database Management"
+    "Database Management",
+    "AI Integration"
   ];
 
   const handleServiceChange = (service: string, checked: boolean) => {
