@@ -275,7 +275,7 @@ const Request = () => {
                 <p className="text-sm text-gray-300 mb-4">
                   Have questions about our services? Contact us directly.
                 </p>
-                <Button variant="outline" size="sm" className="w-full border-white text-white hover:bg-white hover:text-black" asChild>
+                <Button variant="outline" size="sm" className="w-full border-white text-black hover:bg-white hover:text-black" asChild>
                   <a href="/chatbot">Contact Support</a>
                 </Button>
               </CardContent>
