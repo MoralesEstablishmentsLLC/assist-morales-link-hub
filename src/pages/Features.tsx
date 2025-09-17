@@ -11,7 +11,7 @@ const Features = () => {
       icon: <Bot className="h-8 w-8" />,
       title: "AI Chatbots & Virtual Assistants",
       description: "Custom chatbots that understand your business and provide 24/7 customer support",
-      technologies: ["OpenAI GPT", "Natural Language Processing", "Real-time Chat", "Voice Integration"],
+      technologies: ["Advanced AI Models", "Natural Language Processing", "Real-time Chat", "Voice Integration"],
       color: "bg-blue-500/10 text-blue-600",
       demo: "/chatbot"
     },
