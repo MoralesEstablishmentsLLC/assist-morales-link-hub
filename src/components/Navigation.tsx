@@ -9,7 +9,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "Personal Resume", path: "/resume" },
     { name: "Client List", path: "/clients" },
-    { name: "Features", path: "/features" },
+    { name: "Explore Features", path: "/features" },
     { name: "Request", path: "/request" },
     { name: "Edit Site", path: "/edit-site" },
     { name: "Contact", path: "/contact" },
