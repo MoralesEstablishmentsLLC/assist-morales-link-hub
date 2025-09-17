@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -144,9 +145,11 @@ const ClientList = () => {
                 Ready to transform your business digitally? Connect with our network of successful 
                 businesses and take your company to the next level.
               </p>
-              <Button variant="secondary" size="lg">
-                Get Started Today
-              </Button>
+              <Link to="/request">
+                <Button variant="secondary" size="lg">
+                  Get Started Today
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </div>
