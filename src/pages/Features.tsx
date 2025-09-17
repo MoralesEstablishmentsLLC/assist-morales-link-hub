@@ -5,11 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Bot, Code, Database, Globe, MessageSquare, Zap, Smartphone, Shield, Cloud, Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
-import CodeEditor from "@/components/demos/CodeEditor";
+import EmailDemo from "@/components/demos/EmailDemo";
 import AnimationDemo from "@/components/demos/AnimationDemo";
-import DatabaseDemo from "@/components/demos/DatabaseDemo";
 import ResponsiveDemo from "@/components/demos/ResponsiveDemo";
-import AIDemo from "@/components/demos/AIDemo";
 
 const Features = () => {
   const features = [
@@ -169,26 +167,16 @@ const Features = () => {
             Experience our technical capabilities firsthand with these interactive demonstrations
           </p>
           
-          <Tabs defaultValue="ai" className="w-full">
-            <TabsList className="grid w-full grid-cols-5">
-              <TabsTrigger value="ai">AI Assistant</TabsTrigger>
-              <TabsTrigger value="code">Code Editor</TabsTrigger>
-              <TabsTrigger value="database">Database</TabsTrigger>
+          <Tabs defaultValue="email" className="w-full">
+            <TabsList className="grid w-full grid-cols-3">
+              <TabsTrigger value="email">Email System</TabsTrigger>
               <TabsTrigger value="animation">Animations</TabsTrigger>
               <TabsTrigger value="responsive">Responsive</TabsTrigger>
             </TabsList>
             
             <div className="mt-8 flex justify-center">
-              <TabsContent value="ai" className="w-full flex justify-center">
-                <AIDemo />
-              </TabsContent>
-              
-              <TabsContent value="code" className="w-full flex justify-center">
-                <CodeEditor />
-              </TabsContent>
-              
-              <TabsContent value="database" className="w-full flex justify-center">
-                <DatabaseDemo />
+              <TabsContent value="email" className="w-full flex justify-center">
+                <EmailDemo />
               </TabsContent>
               
               <TabsContent value="animation" className="w-full flex justify-center">
