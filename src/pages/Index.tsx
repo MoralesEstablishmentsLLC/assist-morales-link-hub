@@ -13,7 +13,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <TypeWriter text="Morales Assist" speed={150} />
+            <TypeWriter text="MorAssist" speed={150} />
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
             Empowering small businesses and companies to thrive in the digital world through 
