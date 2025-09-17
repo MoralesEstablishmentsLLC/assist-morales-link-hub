@@ -19,6 +19,13 @@ const ClientList = () => {
       description: "Professional private investigation services providing discreet and confidential solutions for personal and corporate clients",
       website: "Coming Soon",
       services: ["Secure Contact Forms", "Client Portal", "Privacy-Focused Design"]
+    },
+    {
+      name: "FynCom",
+      industry: "Telecommunications & Privacy",
+      description: "Revolutionary platform that helps users earn money while blocking spam calls and messages, turning unwanted communications into revenue opportunities",
+      website: "fyncom.com",
+      services: ["Web Platform Development", "Payment Integration", "Spam Detection System"]
     }
   ];
 
