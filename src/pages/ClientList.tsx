@@ -30,7 +30,7 @@ const ClientList = () => {
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12 text-center bg-primary p-8 rounded-lg text-primary-foreground">
-          <h1 className="text-4xl font-bold text-foreground mb-4">Client Directory</h1>
+          <h1 className="text-4xl font-bold text-blue-300 mb-4">Client Directory</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Discover our network of diverse businesses and companies across various industries. 
             Each client represents a successful partnership in digital transformation.
