@@ -48,7 +48,7 @@ export const EmailDemo = () => {
         {/* How Resend Works */}
         <div className="space-y-4">
           <h3 className="text-lg font-semibold">How Resend Works</h3>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2">
             <div className="p-4 bg-muted rounded-lg">
               <div className="flex items-center gap-2 mb-2">
                 <Code2 className="h-5 w-5 text-primary" />
