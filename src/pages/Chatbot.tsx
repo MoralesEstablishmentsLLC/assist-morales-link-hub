@@ -141,7 +141,7 @@ const Chatbot = () => {
           </p>
         </div>
 
-        <Card className="shadow-card h-[600px] flex flex-col">
+        <Card className="shadow-card min-h-[400px] flex flex-col">
           <CardHeader className="border-b">
             <CardTitle className="text-primary flex items-center gap-2">
               <Bot className="w-6 h-6" />
@@ -149,8 +149,8 @@ const Chatbot = () => {
             </CardTitle>
           </CardHeader>
           
-          <CardContent className="flex-1 flex flex-col p-0">
-            <div className="flex-1 overflow-y-auto p-6 space-y-4">
+          <CardContent className="flex flex-col p-0">
+            <div className="overflow-y-auto p-6 space-y-4 max-h-[70vh]">
               {messages.map((message) => (
                 <div
                   key={message.id}
