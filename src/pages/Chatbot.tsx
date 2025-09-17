@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import TypeWriter from "@/components/TypeWriter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,6 +12,7 @@ interface Message {
   text: string;
   sender: 'user' | 'bot';
   timestamp: Date;
+  isTyping?: boolean;
 }
 
 const Chatbot = () => {
@@ -110,6 +112,7 @@ const Chatbot = () => {
         text: generateBotResponse(inputText),
         sender: 'bot',
         timestamp: new Date(),
+        isTyping: true,
       };
       
       setMessages(prev => [...prev, botResponse]);
@@ -167,7 +170,11 @@ const Chatbot = () => {
                           : 'bg-accent text-accent-foreground'
                       }`}
                     >
-                      {message.text}
+                      {message.sender === 'bot' && message.isTyping ? (
+                        <TypeWriter text={message.text} speed={30} />
+                      ) : (
+                        message.text
+                      )}
                     </div>
                     <div className="text-xs text-muted-foreground mt-1">
                       {message.timestamp.toLocaleTimeString()}
