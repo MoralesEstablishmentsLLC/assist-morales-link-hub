@@ -158,7 +158,7 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 text-left">
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">How quickly can you start my project?</h4>
-                  <p className="text-muted-foreground text-sm">Most projects can begin within 1-2 weeks of contract signing, depending on scope and current workload.</p>
+                  <p className="text-muted-foreground text-sm">Project timelines vary based on complexity, but most websites are completed within 1-2 weeks from start to finish.</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Do you work with businesses outside the US?</h4>
