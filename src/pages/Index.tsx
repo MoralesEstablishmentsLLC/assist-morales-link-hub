@@ -31,6 +31,11 @@ const Index = () => {
                 Start Your Project
               </Button>
             </Link>
+            <Link to="/edit-site">
+              <Button size="lg" variant="outline" className="border-white/60 hover:bg-white/10 text-white hover:text-white">
+                Edit Existing Site
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

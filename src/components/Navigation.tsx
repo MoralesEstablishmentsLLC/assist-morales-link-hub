@@ -10,6 +10,7 @@ const Navigation = () => {
     { name: "Personal Resume", path: "/resume" },
     { name: "Client List", path: "/clients" },
     { name: "Request", path: "/request" },
+    { name: "Edit Site", path: "/edit-site" },
     { name: "Contact", path: "/contact" },
   ];
 
