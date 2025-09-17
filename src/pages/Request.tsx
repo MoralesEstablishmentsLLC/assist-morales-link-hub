@@ -210,6 +210,7 @@ const Request = () => {
                             id={service}
                             checked={formData.services.includes(service)}
                             onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)}
+                            className="border-blue-400 data-[state=checked]:bg-blue-400 data-[state=checked]:border-blue-400"
                           />
                           <Label htmlFor={service} className="text-sm text-white">{service}</Label>
                         </div>
