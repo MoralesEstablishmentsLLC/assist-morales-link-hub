@@ -37,7 +37,7 @@ const EditSite = () => {
       <Navigation />
       
       {/* Content Section with Gray Background */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted min-h-screen">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted min-h-screen" style={{backgroundColor: 'hsl(0 0% 96.1%)'}}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
