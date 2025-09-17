@@ -79,7 +79,7 @@ const Resume = () => {
               
               <div>
                 <h3 className="text-lg font-semibold text-foreground">Bioengineering</h3>
-                <p className="text-primary font-medium">Freelance • 2018 - 2020</p>
+                <p className="text-primary font-medium">UC Merced</p>
                 <ul className="mt-2 space-y-1 text-muted-foreground">
                   <li>• Lab Experience in all sciences</li>
                   <li>• Implemented modern web technologies and best practices</li>
