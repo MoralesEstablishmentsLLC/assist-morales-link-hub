@@ -36,10 +36,11 @@ const EditSite = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="container mx-auto px-4 py-16 bg-muted">
+      {/* Content Section with Gray Background */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted min-h-screen">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
               Edit Your Site
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -200,7 +201,7 @@ const EditSite = () => {
             </CardContent>
           </Card>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
