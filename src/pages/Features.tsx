@@ -163,7 +163,7 @@ const Features = () => {
         {/* Interactive Demos */}
         <section className="mb-20 animate-fade-in-slow bg-dark-section rounded-2xl p-12" style={{ animationDelay: "0.4s" }}>
           <h2 className="text-3xl font-bold text-center mb-12 text-blue-heading">Interactive Feature Demos</h2>
-          <p className="text-center text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-center text-white mb-8 max-w-3xl mx-auto">
             Experience our technical capabilities firsthand with these interactive demonstrations
           </p>
           
