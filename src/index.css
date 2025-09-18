@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 @keyframes bounce-3s {
-  0%, 10%, 25%, 40%, 50% {
+  0%, 15%, 35%, 55%, 70% {
     transform: translateY(0);
   }
-  5%, 15% {
+  8%, 22% {
     transform: translateY(-25px);
   }
-  20%, 35% {
+  28%, 48% {
     transform: translateY(-15px);
   }
-  45% {
+  62% {
     transform: translateY(-5px);
   }
-  50% {
+  70% {
     transform: translateY(0);
   }
   100% {
