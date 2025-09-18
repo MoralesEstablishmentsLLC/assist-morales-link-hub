@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes bounce-3s {
+  0%, 10%, 25%, 40%, 50% {
+    transform: translateY(0);
+  }
+  5%, 15% {
+    transform: translateY(-25px);
+  }
+  20%, 35% {
+    transform: translateY(-15px);
+  }
+  45% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */

@@ -102,7 +102,7 @@ const Features = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-bounce">
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6" style={{ animation: 'bounce-3s 3s ease-in-out' }}>
             Cutting-Edge
             <span className="text-primary"> Development Features</span>
           </h1>
