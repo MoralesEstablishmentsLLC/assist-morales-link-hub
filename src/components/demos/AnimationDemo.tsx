@@ -19,8 +19,8 @@ const AnimationDemo = () => {
 
   const shapes = [
     { name: 'circle', component: 'w-16 h-16 bg-primary rounded-full' },
-    { name: 'square', component: 'w-16 h-16 bg-secondary' },
-    { name: 'triangle', component: 'w-0 h-0 border-l-8 border-r-8 border-b-16 border-transparent border-b-accent' }
+    { name: 'square', component: 'w-16 h-16 bg-primary' },
+    { name: 'triangle', component: 'w-0 h-0 border-l-[32px] border-r-[32px] border-b-[48px] border-transparent border-b-primary' }
   ];
 
   return (
