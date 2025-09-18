@@ -96,17 +96,17 @@ const Features = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-dark-section">`
       <Navigation />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6" style={{ animation: 'bounce-3s 3s ease-in-out' }}>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{ animation: 'bounce-3s 3s ease-in-out' }}>
             Cutting-Edge
             <span className="text-primary"> Development Features</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Discover the advanced technologies and AI-powered solutions we use to build intelligent, 
             scalable, and user-friendly applications that drive business growth.
           </p>
@@ -126,30 +126,30 @@ const Features = () => {
 
         {/* Features Grid */}
         <section className="mb-20 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          <h2 className="text-3xl font-bold text-center mb-12">Technical Capabilities</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">Technical Capabilities</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-border hover:border-primary/20">
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-border hover:border-primary/20 bg-dark-section/50 border-white/10">
                 <CardHeader>
                   <div className={`w-16 h-16 rounded-lg ${feature.color} flex items-center justify-center mb-4`}>
                     {feature.icon}
                   </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground">
+                  <CardTitle className="text-xl text-white">{feature.title}</CardTitle>
+                  <CardDescription className="text-gray-300">
                     {feature.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {feature.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="text-xs">
+                      <Badge key={techIndex} variant="secondary" className="text-xs bg-white/10 text-gray-200 border-white/20">
                         {tech}
                       </Badge>
                     ))}
                   </div>
                   {feature.demo && (
                     <Link to={feature.demo}>
-                      <Button variant="outline" size="sm" className="w-full">
+                      <Button variant="outline" size="sm" className="w-full border-white/30 text-white hover:bg-white/10">
                         View Demo
                       </Button>
                     </Link>
@@ -192,23 +192,23 @@ const Features = () => {
 
         {/* Showcase Projects */}
         <section className="mb-20 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-          <h2 className="text-3xl font-bold text-center mb-12">AI Bot Showcase</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">AI Bot Showcase</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {showcaseProjects.map((project, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300">
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 bg-dark-section/50 border-white/10">
                 <CardHeader>
-                  <CardTitle className="text-xl flex items-center gap-2">
+                  <CardTitle className="text-xl flex items-center gap-2 text-white">
                     <Bot className="h-5 w-5 text-primary" />
                     {project.title}
                   </CardTitle>
-                  <CardDescription>
+                  <CardDescription className="text-gray-300">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {project.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-sm text-muted-foreground flex items-center gap-2">
+                      <li key={featureIndex} className="text-sm text-gray-300 flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
                         {feature}
                       </li>
@@ -221,9 +221,9 @@ const Features = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center bg-card rounded-2xl p-12 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-          <h2 className="text-3xl font-bold mb-4">Ready to Build Something Amazing?</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <section className="text-center bg-dark-section/50 border border-white/10 rounded-2xl p-12 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+          <h2 className="text-3xl font-bold mb-4 text-white">Ready to Build Something Amazing?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can leverage these technologies to create custom solutions for your business needs.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
@@ -233,7 +233,7 @@ const Features = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
                 Schedule Consultation
               </Button>
             </Link>
