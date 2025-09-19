@@ -113,12 +113,48 @@ export default {
             opacity: "1"
           }
         },
+        "pendulum-left": {
+          "0%, 100%": { 
+            transform: "translateX(0) rotate(0deg)" 
+          },
+          "25%": { 
+            transform: "translateX(8px) rotate(2deg)" 
+          },
+          "75%": { 
+            transform: "translateX(-8px) rotate(-2deg)" 
+          }
+        },
+        "pendulum-center": {
+          "0%, 100%": { 
+            transform: "translateX(0) rotate(0deg)" 
+          },
+          "25%": { 
+            transform: "translateX(-12px) rotate(-3deg)" 
+          },
+          "75%": { 
+            transform: "translateX(12px) rotate(3deg)" 
+          }
+        },
+        "pendulum-right": {
+          "0%, 100%": { 
+            transform: "translateX(0) rotate(0deg)" 
+          },
+          "25%": { 
+            transform: "translateX(-8px) rotate(-2deg)" 
+          },
+          "75%": { 
+            transform: "translateX(8px) rotate(2deg)" 
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 3s ease-out forwards",
         "slide-in-right": "slide-in-right 2.6s ease-out forwards",
+        "pendulum-left": "pendulum-left 2s ease-in-out infinite",
+        "pendulum-center": "pendulum-center 2s ease-in-out infinite 0.2s",
+        "pendulum-right": "pendulum-right 2s ease-in-out infinite 0.4s",
       },
     },
   },

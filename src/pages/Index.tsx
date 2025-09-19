@@ -19,18 +19,18 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/clients">
-              <Button size="lg" variant="secondary" className="shadow-elegant">
+              <Button size="lg" variant="secondary" className="shadow-elegant animate-pendulum-left">
                 Explore Our Client Network
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <Link to="/request">
-              <Button size="lg" variant="outline" className="border-white hover:bg-white text-slate-950">
+              <Button size="lg" variant="outline" className="border-white hover:bg-white text-slate-950 animate-pendulum-center">
                 Start Your Project
               </Button>
             </Link>
             <Link to="/edit-site">
-              <Button size="lg" variant="outline" className="border-white/60 hover:bg-white/10 text-black hover:text-black">
+              <Button size="lg" variant="outline" className="border-white/60 hover:bg-white/10 text-black hover:text-black animate-pendulum-right">
                 Edit Existing Site
               </Button>
             </Link>
