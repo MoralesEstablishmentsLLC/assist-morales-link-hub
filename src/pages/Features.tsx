@@ -168,7 +168,7 @@ const Features = () => {
         </section>
 
         {/* Showcase Projects */}
-        <section className="mb-20 animate-fade-in bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 rounded-2xl p-12" style={{
+        <section className="mb-20 animate-fade-in bg-gradient-to-r from-gray-900 via-black to-gray-900 rounded-2xl p-12" style={{
         animationDelay: "0.6s"
       }}>
           <h2 className="text-3xl font-bold text-center mb-12 text-white">Bot Showcase</h2>
