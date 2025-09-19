@@ -22,7 +22,7 @@ const TypeWriter = ({ text, speed = 100, className = "" }: TypeWriterProps) => {
   }, [currentIndex, text, speed]);
 
   return (
-    <span className={`${className} animate-spin-fast`}>
+    <span className={className}>
       {displayText}
       {currentIndex < text.length && (
         <span className="animate-pulse">|</span>
