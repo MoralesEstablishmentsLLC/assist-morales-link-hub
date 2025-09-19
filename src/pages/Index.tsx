@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Globe, Users, Zap, CheckCircle, Building2, Target } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const Index = () => {
+  const { ref: benefitsRef, isVisible: benefitsVisible } = useScrollAnimation(0.3);
   return <div className="min-h-screen bg-background">
       
       {/* Hero Section */}
@@ -110,22 +112,34 @@ const Index = () => {
                 Our personalized approach ensures every solution is tailored to your specific needs and goals.
               </p>
               
-              <div className="space-y-4">
-                <div className="flex items-start gap-3 opacity-0 animate-fade-in [animation-delay:0.5s]">
+              <div ref={benefitsRef} className="space-y-4">
+                <div className={`flex items-start gap-3 transition-all duration-700 ${
+                  benefitsVisible 
+                    ? 'opacity-100 translate-y-0 delay-200' 
+                    : 'opacity-0 translate-y-4'
+                }`}>
                   <CheckCircle className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h4 className="font-semibold text-foreground">Personalized Service</h4>
                     <p className="text-muted-foreground">Direct communication with experienced professionals who understand your industry.</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 opacity-0 animate-fade-in [animation-delay:1s]">
+                <div className={`flex items-start gap-3 transition-all duration-700 ${
+                  benefitsVisible 
+                    ? 'opacity-100 translate-y-0 delay-500' 
+                    : 'opacity-0 translate-y-4'
+                }`}>
                   <CheckCircle className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h4 className="font-semibold text-foreground">Proven Results</h4>
                     <p className="text-muted-foreground">Track record of helping businesses increase their online presence and revenue.</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 opacity-0 animate-fade-in [animation-delay:1.5s]">
+                <div className={`flex items-start gap-3 transition-all duration-700 ${
+                  benefitsVisible 
+                    ? 'opacity-100 translate-y-0 delay-700' 
+                    : 'opacity-0 translate-y-4'
+                }`}>
                   <CheckCircle className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h4 className="font-semibold text-foreground">Ongoing Support</h4>
