@@ -166,7 +166,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-white mb-2">What is your typical project timeline?</h4>
-                  <p className="text-gray-300 text-sm">Project timelines vary based on complexity, but most websites are completed within 4-8 weeks from start to finish.</p>
+                  <p className="text-gray-300 text-sm">Project timelines vary based on complexity, but most websites are completed within 1-2 weeks from start to finish.</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-white mb-2">Do you provide ongoing support?</h4>
