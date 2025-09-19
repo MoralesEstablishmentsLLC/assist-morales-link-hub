@@ -74,22 +74,22 @@ const Contact = () => {
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6">Contact Information</h2>
               <div className="space-y-6">
-                <Card className="shadow-card">
+                <Card className="shadow-card bg-dark-section">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 p-3 rounded-lg">
-                        <Mail className="w-6 h-6 text-primary" />
+                      <div className="bg-white/10 p-3 rounded-lg">
+                        <Mail className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground">Email</h3>
+                        <h3 className="font-semibold text-white">Email</h3>
                         
-                        <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
+                        <p className="text-sm text-gray-300 mt-1">We respond within 24 hours</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card">
+                <Card className="shadow-card bg-dark-section">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
                       <div className="bg-primary/10 p-3 rounded-lg">
@@ -104,31 +104,31 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card">
+                <Card className="shadow-card bg-dark-section">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 p-3 rounded-lg">
-                        <MapPin className="w-6 h-6 text-primary" />
+                      <div className="bg-white/10 p-3 rounded-lg">
+                        <MapPin className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground">Location</h3>
-                        <p className="text-muted-foreground">Serving Clients Worldwide</p>
-                        <p className="text-sm text-muted-foreground mt-1">Digital services with global reach</p>
+                        <h3 className="font-semibold text-white">Location</h3>
+                        <p className="text-gray-300">Serving Clients Worldwide</p>
+                        <p className="text-sm text-gray-300 mt-1">Digital services with global reach</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card">
+                <Card className="shadow-card bg-dark-section">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 p-3 rounded-lg">
-                        <Clock className="w-6 h-6 text-primary" />
+                      <div className="bg-white/10 p-3 rounded-lg">
+                        <Clock className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground">Business Hours</h3>
-                        <p className="text-muted-foreground">Monday - Friday: 10:00 AM - 8:00 PM</p>
-                        <p className="text-sm text-muted-foreground mt-1">Weekend support available for urgent matters</p>
+                        <h3 className="font-semibold text-white">Business Hours</h3>
+                        <p className="text-gray-300">Monday - Friday: 10:00 AM - 8:00 PM</p>
+                        <p className="text-sm text-gray-300 mt-1">Weekend support available for urgent matters</p>
                       </div>
                     </div>
                   </CardContent>
