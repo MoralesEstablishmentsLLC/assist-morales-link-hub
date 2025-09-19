@@ -8,9 +8,11 @@ import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Edit3, Globe, Upload, Save } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const EditSite = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     siteName: "",
     siteUrl: "",
@@ -19,12 +21,56 @@ const EditSite = () => {
     priority: "medium"
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Edit Request Submitted",
-      description: "We'll review your changes and get back to you within 24 hours.",
-    });
+    setIsSubmitting(true);
+
+    try {
+      // Prepare email data for the existing email function
+      const emailData = {
+        name: `Edit Request - ${formData.siteName}`,
+        email: "system@editrequest.com", // System email since this is an edit request
+        company: formData.siteName,
+        phone: "",
+        projectType: "Site Edit Request",
+        budget: formData.priority === "high" ? "ASAP" : formData.priority === "medium" ? "Within a week" : "Can wait 1-2 weeks",
+        timeline: formData.priority === "high" ? "24-48 hours" : formData.priority === "medium" ? "Within a week" : "1-2 weeks",
+        description: `Site URL: ${formData.siteUrl}\n\nType of Changes: ${formData.requestType}\n\nPriority: ${formData.priority}\n\nDetailed Description:\n${formData.description}`,
+        services: [formData.requestType]
+      };
+
+      const { data, error } = await supabase.functions.invoke('send-request-email', {
+        body: emailData
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Edit Request Submitted Successfully!",
+        description: "We've received your edit request and will review it within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        siteName: "",
+        siteUrl: "",
+        requestType: "",
+        description: "",
+        priority: "medium"
+      });
+
+    } catch (error: any) {
+      console.error('Error submitting edit request:', error);
+      toast({
+        title: "Error Submitting Request",
+        description: "There was an issue sending your request. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -191,9 +237,14 @@ const EditSite = () => {
                   </ul>
                 </div>
 
-                <Button type="submit" size="lg" className="w-full bg-gradient-primary hover:opacity-90">
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-gradient-primary hover:opacity-90"
+                  disabled={isSubmitting}
+                >
                   <Save className="w-4 h-4 mr-2" />
-                  Submit Edit Request
+                  {isSubmitting ? "Submitting..." : "Submit Edit Request"}
                 </Button>
               </form>
             </CardContent>
