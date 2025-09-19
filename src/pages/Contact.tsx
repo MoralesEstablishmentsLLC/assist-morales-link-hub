@@ -74,7 +74,7 @@ const Contact = () => {
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6">Contact Information</h2>
               <div className="space-y-6">
-                <Card className="shadow-card bg-dark-section">
+                <Card className="shadow-card bg-dark-section animate-slide-in-right" style={{ animationDelay: '0.1s' }}>
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
                       <div className="bg-white/10 p-3 rounded-lg">
@@ -89,7 +89,7 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card bg-dark-section">
+                <Card className="shadow-card bg-dark-section animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
                       <div className="bg-white/10 p-3 rounded-lg">
@@ -104,7 +104,7 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card bg-dark-section">
+                <Card className="shadow-card bg-dark-section animate-slide-in-right" style={{ animationDelay: '0.3s' }}>
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
                       <div className="bg-white/10 p-3 rounded-lg">
@@ -119,7 +119,7 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card bg-dark-section">
+                <Card className="shadow-card bg-dark-section animate-slide-in-right" style={{ animationDelay: '0.4s' }}>
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
                       <div className="bg-white/10 p-3 rounded-lg">
