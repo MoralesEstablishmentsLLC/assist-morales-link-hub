@@ -48,37 +48,37 @@ const EditSite = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="text-center transition-all duration-500 hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-purple-500/10 hover:border-blue-400/30 hover:shadow-lg hover:shadow-blue-500/20">
+            <Card className="text-center transition-all duration-500 hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-purple-500/10 hover:border-blue-400/30 hover:shadow-lg hover:shadow-blue-500/20 group">
               <CardHeader>
-                <Edit3 className="w-12 h-12 mx-auto text-primary mb-4 transition-colors duration-300 hover:text-blue-400" />
-                <CardTitle className="transition-colors duration-300 hover:text-blue-300">Content Updates</CardTitle>
+                <Edit3 className="w-12 h-12 mx-auto text-primary mb-4 transition-colors duration-300 group-hover:text-blue-400" />
+                <CardTitle className="transition-colors duration-300 group-hover:text-blue-300">Content Updates</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground transition-colors duration-300 hover:text-blue-200">
+                <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-blue-200">
                   Text changes, image updates, new pages, or content modifications
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center transition-all duration-500 hover:bg-gradient-to-br hover:from-green-500/10 hover:to-emerald-500/10 hover:border-green-400/30 hover:shadow-lg hover:shadow-green-500/20">
+            <Card className="text-center transition-all duration-500 hover:bg-gradient-to-br hover:from-green-500/10 hover:to-emerald-500/10 hover:border-green-400/30 hover:shadow-lg hover:shadow-green-500/20 group">
               <CardHeader>
-                <Globe className="w-12 h-12 mx-auto text-primary mb-4 transition-colors duration-300 hover:text-green-400" />
-                <CardTitle className="transition-colors duration-300 hover:text-green-300">Feature Additions</CardTitle>
+                <Globe className="w-12 h-12 mx-auto text-primary mb-4 transition-colors duration-300 group-hover:text-green-400" />
+                <CardTitle className="transition-colors duration-300 group-hover:text-green-300">Feature Additions</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground transition-colors duration-300 hover:text-green-200">
+                <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-green-200">
                   New functionality, integrations, forms, or interactive elements
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center transition-all duration-500 hover:bg-gradient-to-br hover:from-orange-500/10 hover:to-red-500/10 hover:border-orange-400/30 hover:shadow-lg hover:shadow-orange-500/20">
+            <Card className="text-center transition-all duration-500 hover:bg-gradient-to-br hover:from-orange-500/10 hover:to-red-500/10 hover:border-orange-400/30 hover:shadow-lg hover:shadow-orange-500/20 group">
               <CardHeader>
-                <Upload className="w-12 h-12 mx-auto text-primary mb-4 transition-colors duration-300 hover:text-orange-400" />
-                <CardTitle className="transition-colors duration-300 hover:text-orange-300">Design Changes</CardTitle>
+                <Upload className="w-12 h-12 mx-auto text-primary mb-4 transition-colors duration-300 group-hover:text-orange-400" />
+                <CardTitle className="transition-colors duration-300 group-hover:text-orange-300">Design Changes</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground transition-colors duration-300 hover:text-orange-200">
+                <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-orange-200">
                   Layout updates, color schemes, responsive improvements
                 </p>
               </CardContent>
