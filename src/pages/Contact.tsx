@@ -92,12 +92,12 @@ const Contact = () => {
                 <Card className="shadow-card bg-dark-section">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 p-3 rounded-lg">
-                        <Phone className="w-6 h-6 text-primary" />
+                      <div className="bg-white/10 p-3 rounded-lg">
+                        <Phone className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground">Phone</h3>
-                        <p className="text-muted-foreground">+1 (559) 722-6123</p>
+                        <h3 className="font-semibold text-white">Phone</h3>
+                        <p className="text-gray-300">+1 (559) 722-6123</p>
                         <p className="text-sm text-muted-foreground mt-1">Monday - Friday, 10AM - 8PM </p>
                       </div>
                     </div>
