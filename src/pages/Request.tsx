@@ -1,4 +1,3 @@
-import Navigation from "@/components/Navigation";
 import TypeWriter from "@/components/TypeWriter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -76,7 +75,6 @@ const Request = () => {
     }
   };
   return <div className="min-h-screen bg-black text-white">
-      <Navigation />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12 text-center animate-fade-in">

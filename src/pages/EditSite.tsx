@@ -1,4 +1,3 @@
-import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -34,7 +33,6 @@ const EditSite = () => {
 
   return (
     <div className="min-h-screen bg-gradient-hero text-white">
-      <Navigation />
       
       {/* Content Section with Dark Background like Hero */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-hero text-white min-h-screen">

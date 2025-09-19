@@ -1,4 +1,3 @@
-import Navigation from "@/components/Navigation";
 import TypeWriter from "@/components/TypeWriter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,7 +5,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Globe, Users, Zap, CheckCircle, Building2, Target } from "lucide-react";
 const Index = () => {
   return <div className="min-h-screen bg-background">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-hero text-white overflow-hidden">
