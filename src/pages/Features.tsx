@@ -85,8 +85,8 @@ const Features = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6" style={{
           animation: 'bounce-3s 3s ease-in-out'
         }}>
-            Cutting-Edge
-            <span className="text-primary"> Development Features</span>
+            Explore Development
+            <span className="text-primary"> Features</span>
           </h1>
           
           <div className="flex flex-wrap gap-4 justify-center">
