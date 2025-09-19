@@ -1,7 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Phone, MapPin, Globe } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const Resume = () => {
+  const { ref: contactRef, isVisible: contactVisible } = useScrollAnimation();
+  const { ref: summaryRef, isVisible: summaryVisible } = useScrollAnimation();
+  const { ref: experienceRef, isVisible: experienceVisible } = useScrollAnimation();
+  const { ref: skillsRef, isVisible: skillsVisible } = useScrollAnimation();
+
   return <div className="min-h-screen bg-black text-white">
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -14,7 +20,14 @@ const Resume = () => {
 
         <div className="grid gap-8">
           {/* Contact Information */}
-          <Card className="shadow-card bg-gray-900 border-gray-800">
+          <Card 
+            ref={contactRef}
+            className={`shadow-card bg-gray-900 border-gray-800 transition-all duration-700 ${
+              contactVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+          >
             <CardHeader>
               <CardTitle className="text-blue-400">Contact Information</CardTitle>
             </CardHeader>
@@ -42,7 +55,14 @@ const Resume = () => {
           </Card>
 
           {/* Professional Summary */}
-          <Card className="shadow-card bg-gray-900 border-gray-800">
+          <Card 
+            ref={summaryRef}
+            className={`shadow-card bg-gray-900 border-gray-800 transition-all duration-700 delay-200 ${
+              summaryVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+          >
             <CardHeader>
               <CardTitle className="text-blue-400">Professional Summary</CardTitle>
             </CardHeader>
@@ -56,7 +76,14 @@ const Resume = () => {
           </Card>
 
           {/* Experience */}
-          <Card className="shadow-card bg-gray-900 border-gray-800">
+          <Card 
+            ref={experienceRef}
+            className={`shadow-card bg-gray-900 border-gray-800 transition-all duration-700 delay-400 ${
+              experienceVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+          >
             <CardHeader>
               <CardTitle className="text-blue-400">Experience</CardTitle>
             </CardHeader>
@@ -85,7 +112,14 @@ const Resume = () => {
           </Card>
 
           {/* Skills */}
-          <Card className="shadow-card bg-gray-900 border-gray-800">
+          <Card 
+            ref={skillsRef}
+            className={`shadow-card bg-gray-900 border-gray-800 transition-all duration-700 delay-600 ${
+              skillsVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+          >
             <CardHeader>
               <CardTitle className="text-blue-400">Core Skills</CardTitle>
             </CardHeader>
