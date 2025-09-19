@@ -80,35 +80,7 @@ export const EmailDemo = () => {
         </div>
 
         {/* Interactive Demo */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Try it Out (Demo)</h3>
-          <div className="grid gap-4">
-            <div className="space-y-2">
-              <label className="text-sm font-medium">To</label>
-              <Input type="email" placeholder="recipient@example.com" value={recipient} onChange={e => setRecipient(e.target.value)} />
-            </div>
-            
-            <div className="space-y-2">
-              <label className="text-sm font-medium">Subject</label>
-              <Input placeholder="Email subject" value={subject} onChange={e => setSubject(e.target.value)} />
-            </div>
-            
-            <div className="space-y-2">
-              <label className="text-sm font-medium">Content</label>
-              <Textarea placeholder="Email content..." value={content} onChange={e => setContent(e.target.value)} className="min-h-[100px]" />
-            </div>
-
-            <Button onClick={handleSendEmail} disabled={isSending} className="w-full">
-              {isSending ? <>
-                  <Clock className="h-4 w-4 mr-2 animate-spin" />
-                  Sending via Resend...
-                </> : <>
-                  <Send className="h-4 w-4 mr-2" />
-                  Send Email
-                </>}
-            </Button>
-          </div>
-        </div>
+        
 
         {/* Result */}
         {emailSent && <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
