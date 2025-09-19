@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 const Navigation = () => {
   const location = useLocation();
@@ -19,7 +20,8 @@ const Navigation = () => {
     <nav className="bg-card shadow-card border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
+          <div className="flex items-center gap-4">
+            <SidebarTrigger />
             <Link to="/" className="text-2xl font-bold text-primary">
               MorAssist
             </Link>

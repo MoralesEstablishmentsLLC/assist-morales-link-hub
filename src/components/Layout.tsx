@@ -12,11 +12,6 @@ export function Layout({ children }: LayoutProps) {
       <div className="flex min-h-screen w-full">
         <AppSidebar />
         <div className="flex-1 flex flex-col">
-          <header className="border-b bg-card">
-            <div className="flex items-center gap-4 p-4">
-              <SidebarTrigger />
-            </div>
-          </header>
           <Navigation />
           <main className="flex-1">
             {children}
