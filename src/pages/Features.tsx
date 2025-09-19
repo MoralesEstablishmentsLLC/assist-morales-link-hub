@@ -168,10 +168,10 @@ const Features = () => {
         </section>
 
         {/* Showcase Projects */}
-        <section className="mb-20 animate-fade-in" style={{
+        <section className="mb-20 animate-fade-in bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 rounded-2xl p-12" style={{
         animationDelay: "0.6s"
       }}>
-          <h2 className="text-3xl font-bold text-center mb-12">AI Bot Showcase</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">AI Bot Showcase</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {showcaseProjects.map((project, index) => <Card key={index} className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
