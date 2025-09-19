@@ -29,6 +29,13 @@ const ClientList = () => {
       description: "Revolutionary platform that helps users earn money while blocking spam calls and messages, turning unwanted communications into revenue opportunities",
       website: "fyncom.com",
       services: ["Web Platform Development", "Payment Integration", "Spam Detection System"]
+    },
+    {
+      name: "Bali Learning",
+      industry: "Education & Tutoring",
+      description: "Comprehensive tutoring services offering both in-person and online learning experiences, helping students achieve academic excellence through personalized instruction",
+      website: "balilearning.com",
+      services: ["Online Learning Platform", "Student Portal", "Scheduling System", "Progress Tracking"]
     }
   ];
 
