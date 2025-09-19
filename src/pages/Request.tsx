@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import TypeWriter from "@/components/TypeWriter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -80,10 +81,11 @@ const Request = () => {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12 text-center animate-fade-in">
           <h1 className="text-4xl font-bold text-white mb-4">Request Services</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to take your business to the next level? Fill out the form below and let's discuss 
-            how we can help you succeed in the digital world.
-          </p>
+          <TypeWriter 
+            text="Ready to take your business to the next level? Fill out the form below and let's discuss how we can help you succeed in the digital world."
+            speed={50}
+            className="text-xl text-gray-300 max-w-3xl mx-auto"
+          />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
