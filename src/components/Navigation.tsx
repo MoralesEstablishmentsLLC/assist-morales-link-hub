@@ -1,6 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { SidebarTrigger } from "@/components/ui/sidebar";
+import { Menu } from "lucide-react";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { AppSidebar } from "@/components/AppSidebar";
 
 const Navigation = () => {
   const location = useLocation();
@@ -21,7 +27,16 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-4">
-            <SidebarTrigger />
+            <Drawer>
+              <DrawerTrigger asChild>
+                <Button variant="ghost" size="sm">
+                  <Menu className="h-4 w-4" />
+                </Button>
+              </DrawerTrigger>
+              <DrawerContent className="h-full w-80 mt-0 rounded-none">
+                <AppSidebar />
+              </DrawerContent>
+            </Drawer>
             <Link to="/" className="text-2xl font-bold text-primary">
               MorAssist
             </Link>
