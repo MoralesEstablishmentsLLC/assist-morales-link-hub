@@ -111,21 +111,21 @@ const Index = () => {
               </p>
               
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 animate-fade-in opacity-0 [animation-delay:0.2s]">
                   <CheckCircle className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h4 className="font-semibold text-foreground">Personalized Service</h4>
                     <p className="text-muted-foreground">Direct communication with experienced professionals who understand your industry.</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 animate-fade-in opacity-0 [animation-delay:0.6s]">
                   <CheckCircle className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h4 className="font-semibold text-foreground">Proven Results</h4>
                     <p className="text-muted-foreground">Track record of helping businesses increase their online presence and revenue.</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 animate-fade-in opacity-0 [animation-delay:1s]">
                   <CheckCircle className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h4 className="font-semibold text-foreground">Ongoing Support</h4>
