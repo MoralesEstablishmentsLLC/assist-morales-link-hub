@@ -1,8 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Bot, Code, Database, Globe, MessageSquare, Zap, Smartphone, Shield, Cloud, Cpu } from "lucide-react";
+import { Bot, Code, Database, Globe, MessageSquare, Zap, Smartphone, Shield, Cloud, Cpu, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EmailDemo } from "@/components/demos/EmailDemo";
 import AnimationDemo from "@/components/demos/AnimationDemo";
@@ -173,25 +174,39 @@ const Features = () => {
       }}>
           <h2 className="text-3xl font-bold text-center mb-12 text-white">Bot Showcase</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {showcaseProjects.map((project, index) => <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl flex items-center gap-2">
-                    <Bot className="h-5 w-5 text-primary" />
-                    {project.title}
-                  </CardTitle>
-                  <CardDescription>
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {project.features.map((feature, featureIndex) => <li key={featureIndex} className="text-sm text-muted-foreground flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                        {feature}
-                      </li>)}
-                  </ul>
-                </CardContent>
-              </Card>)}
+            {showcaseProjects.map((project, index) => 
+              <DropdownMenu key={index}>
+                <DropdownMenuTrigger asChild>
+                  <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer bg-white/5 border-white/10">
+                    <CardHeader>
+                      <CardTitle className="text-xl flex items-center gap-2 text-white">
+                        <Bot className="h-5 w-5 text-blue-400" />
+                        {project.title}
+                        <ChevronDown className="h-4 w-4 ml-auto" />
+                      </CardTitle>
+                    </CardHeader>
+                  </Card>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-80 p-4 bg-gray-800 border-gray-600 z-50">
+                  <div className="space-y-3">
+                    <p className="text-gray-300 text-sm">
+                      {project.description}
+                    </p>
+                    <div className="space-y-2">
+                      <h4 className="text-white font-medium text-sm">Features:</h4>
+                      <ul className="space-y-1">
+                        {project.features.map((feature, featureIndex) => 
+                          <li key={featureIndex} className="text-sm text-gray-300 flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                            {feature}
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+                  </div>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
           </div>
         </section>
 
