@@ -150,36 +150,35 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              <Card className="shadow-card text-center">
+              <Card className="shadow-card text-center transition-all duration-500 hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-cyan-500/10 hover:border-blue-400/30 hover:shadow-lg hover:shadow-blue-500/20 group">
                 <CardContent className="pt-6">
-                  <Building2 className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground">50+</h3>
-                  <p className="text-muted-foreground">Happy Clients</p>
+                  <Building2 className="w-12 h-12 text-primary mx-auto mb-4 transition-colors duration-300 group-hover:text-blue-400" />
+                  <h3 className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-blue-300">50+</h3>
+                  <p className="text-muted-foreground transition-colors duration-300 group-hover:text-blue-200">Happy Clients</p>
                 </CardContent>
               </Card>
               
-              <Card className="shadow-card text-center">
+              <Card className="shadow-card text-center transition-all duration-500 hover:bg-gradient-to-br hover:from-green-500/10 hover:to-emerald-500/10 hover:border-green-400/30 hover:shadow-lg hover:shadow-green-500/20 group">
                 <CardContent className="pt-6">
-                  <Target className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground">100
-%</h3>
-                  <p className="text-muted-foreground">Accurate Results</p>
+                  <Target className="w-12 h-12 text-primary mx-auto mb-4 transition-colors duration-300 group-hover:text-green-400" />
+                  <h3 className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-green-300">100%</h3>
+                  <p className="text-muted-foreground transition-colors duration-300 group-hover:text-green-200">Accurate Results</p>
                 </CardContent>
               </Card>
               
-              <Card className="shadow-card text-center">
+              <Card className="shadow-card text-center transition-all duration-500 hover:bg-gradient-to-br hover:from-purple-500/10 hover:to-pink-500/10 hover:border-purple-400/30 hover:shadow-lg hover:shadow-purple-500/20 group">
                 <CardContent className="pt-6">
-                  <Globe className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground">24/7</h3>
-                  <p className="text-muted-foreground">Support Available</p>
+                  <Globe className="w-12 h-12 text-primary mx-auto mb-4 transition-colors duration-300 group-hover:text-purple-400" />
+                  <h3 className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-purple-300">24/7</h3>
+                  <p className="text-muted-foreground transition-colors duration-300 group-hover:text-purple-200">Support Available</p>
                 </CardContent>
               </Card>
               
-              <Card className="shadow-card text-center">
+              <Card className="shadow-card text-center transition-all duration-500 hover:bg-gradient-to-br hover:from-orange-500/10 hover:to-red-500/10 hover:border-orange-400/30 hover:shadow-lg hover:shadow-orange-500/20 group">
                 <CardContent className="pt-6">
-                  <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground">10+</h3>
-                  <p className="text-muted-foreground">Industries Served</p>
+                  <Users className="w-12 h-12 text-primary mx-auto mb-4 transition-colors duration-300 group-hover:text-orange-400" />
+                  <h3 className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-orange-300">10+</h3>
+                  <p className="text-muted-foreground transition-colors duration-300 group-hover:text-orange-200">Industries Served</p>
                 </CardContent>
               </Card>
             </div>
