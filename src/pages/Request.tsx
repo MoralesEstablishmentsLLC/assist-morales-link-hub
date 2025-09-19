@@ -10,7 +10,6 @@ import { Send, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-
 const Request = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -24,45 +23,32 @@ const Request = () => {
     services: [] as string[]
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const serviceOptions = [
-    "Web Development",
-    "E-commerce Solutions",
-    "Digital Marketing",
-    "SEO Optimization",
-    "Branding & Design",
-    "Business Consulting",
-    "Mobile App Development",
-    "Database Management",
-    "AI Integration"
-  ];
-
+  const {
+    toast
+  } = useToast();
+  const serviceOptions = ["Web Development", "E-commerce Solutions", "Digital Marketing", "SEO Optimization", "Branding & Design", "Business Consulting", "Mobile App Development", "Database Management", "AI Integration"];
   const handleServiceChange = (service: string, checked: boolean) => {
     setFormData(prev => ({
       ...prev,
-      services: checked 
-        ? [...prev.services, service]
-        : prev.services.filter(s => s !== service)
+      services: checked ? [...prev.services, service] : prev.services.filter(s => s !== service)
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
-      const { data, error } = await supabase.functions.invoke('send-request-email', {
+      const {
+        data,
+        error
+      } = await supabase.functions.invoke('send-request-email', {
         body: formData
       });
-
       if (error) {
         throw error;
       }
-
       toast({
         title: "Request Sent!",
-        description: "Thank you for your request. We'll get back to you within 24 hours.",
+        description: "Thank you for your request. We'll get back to you within 24 hours."
       });
 
       // Reset form
@@ -82,15 +68,13 @@ const Request = () => {
       toast({
         title: "Error",
         description: "There was an error sending your request. Please try again.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
     }
   };
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       <Navigation />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -113,49 +97,44 @@ const Request = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name" className="text-blue-400">Full Name *</Label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                        required
-                      />
+                      <Input id="name" value={formData.name} onChange={e => setFormData(prev => ({
+                      ...prev,
+                      name: e.target.value
+                    }))} required />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-blue-400">Email Address *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                        required
-                      />
+                      <Input id="email" type="email" value={formData.email} onChange={e => setFormData(prev => ({
+                      ...prev,
+                      email: e.target.value
+                    }))} required />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="company" className="text-blue-400">Company/Business Name</Label>
-                      <Input
-                        id="company"
-                        value={formData.company}
-                        onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
-                      />
+                      <Input id="company" value={formData.company} onChange={e => setFormData(prev => ({
+                      ...prev,
+                      company: e.target.value
+                    }))} />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone" className="text-blue-400">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                      />
+                      <Input id="phone" type="tel" value={formData.phone} onChange={e => setFormData(prev => ({
+                      ...prev,
+                      phone: e.target.value
+                    }))} />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="projectType" className="text-blue-400">Project Type</Label>
-                      <Select onValueChange={(value) => setFormData(prev => ({ ...prev, projectType: value }))}>
+                      <Select onValueChange={value => setFormData(prev => ({
+                      ...prev,
+                      projectType: value
+                    }))}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select project type" />
                         </SelectTrigger>
@@ -171,7 +150,10 @@ const Request = () => {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="budget" className="text-blue-400">Budget Range</Label>
-                      <Select onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}>
+                      <Select onValueChange={value => setFormData(prev => ({
+                      ...prev,
+                      budget: value
+                    }))}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select budget range" />
                         </SelectTrigger>
@@ -187,7 +169,10 @@ const Request = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="timeline" className="text-blue-400">Preferred Timeline</Label>
-                    <Select onValueChange={(value) => setFormData(prev => ({ ...prev, timeline: value }))}>
+                    <Select onValueChange={value => setFormData(prev => ({
+                    ...prev,
+                    timeline: value
+                  }))}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select timeline" />
                       </SelectTrigger>
@@ -204,30 +189,19 @@ const Request = () => {
                   <div className="space-y-4">
                     <Label className="text-blue-400">Services Needed (select all that apply)</Label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {serviceOptions.map((service) => (
-                        <div key={service} className="flex items-center space-x-2">
-                          <Checkbox
-                            id={service}
-                            checked={formData.services.includes(service)}
-                            onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)}
-                            className="border-blue-400 data-[state=checked]:bg-blue-400 data-[state=checked]:border-blue-400"
-                          />
+                      {serviceOptions.map(service => <div key={service} className="flex items-center space-x-2">
+                          <Checkbox id={service} checked={formData.services.includes(service)} onCheckedChange={checked => handleServiceChange(service, checked as boolean)} className="border-blue-400 data-[state=checked]:bg-blue-400 data-[state=checked]:border-blue-400" />
                           <Label htmlFor={service} className="text-sm text-white">{service}</Label>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="description" className="text-blue-400">Project Description *</Label>
-                    <Textarea
-                      id="description"
-                      placeholder="Please describe your project, goals, and any specific requirements..."
-                      className="min-h-[120px]"
-                      value={formData.description}
-                      onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
-                      required
-                    />
+                    <Textarea id="description" placeholder="Please describe your project, goals, and any specific requirements..." className="min-h-[120px]" value={formData.description} onChange={e => setFormData(prev => ({
+                    ...prev,
+                    description: e.target.value
+                  }))} required />
                   </div>
 
                   <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90" disabled={isSubmitting}>
@@ -283,8 +257,6 @@ const Request = () => {
           </div>
         </div>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Request;
