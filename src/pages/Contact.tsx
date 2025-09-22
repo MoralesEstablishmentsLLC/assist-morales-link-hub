@@ -141,8 +141,8 @@ const Contact = () => {
                 <p className="opacity-90 mb-4">
                   Schedule a free 30-minute consultation to discuss your project in detail.
                 </p>
-                <Button variant="secondary" className="w-full">
-                  Schedule a Call
+                <Button variant="secondary" className="w-full" asChild>
+                  <a href="sms:+15597226123">Schedule a Call</a>
                 </Button>
               </CardContent>
             </Card>
