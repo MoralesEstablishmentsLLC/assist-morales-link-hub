@@ -51,7 +51,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300">
+            <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300 animate-color-shift">
               <CardHeader className="text-center">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe className="w-8 h-8 text-primary" />
@@ -66,7 +66,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300">
+            <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300 animate-color-shift">
               <CardHeader className="text-center">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-primary" />
@@ -81,7 +81,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300">
+            <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300 animate-color-shift">
               <CardHeader className="text-center">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="w-8 h-8 text-primary" />

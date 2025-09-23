@@ -150,6 +150,28 @@ export default {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(3600deg)" }
         },
+        "color-shift": {
+          "0%": { 
+            backgroundColor: "hsl(var(--card))",
+            borderColor: "hsl(var(--border))"
+          },
+          "25%": { 
+            backgroundColor: "hsl(262 83% 58% / 0.1)",
+            borderColor: "hsl(262 83% 58% / 0.3)"
+          },
+          "50%": { 
+            backgroundColor: "hsl(221 83% 53% / 0.1)",
+            borderColor: "hsl(221 83% 53% / 0.3)"
+          },
+          "75%": { 
+            backgroundColor: "hsl(142 76% 36% / 0.1)",
+            borderColor: "hsl(142 76% 36% / 0.3)"
+          },
+          "100%": { 
+            backgroundColor: "hsl(var(--card))",
+            borderColor: "hsl(var(--border))"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -160,6 +182,7 @@ export default {
         "pendulum-center": "pendulum-center 2s ease-in-out infinite 0.2s",
         "pendulum-right": "pendulum-right 2s ease-in-out infinite 0.4s",
         "spin-5x": "spin-5x 1s ease-in-out",
+        "color-shift": "color-shift 3s ease-in-out infinite",
       },
     },
   },
