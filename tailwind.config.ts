@@ -146,6 +146,10 @@ export default {
             transform: "translateX(8px) rotate(2deg)" 
           }
         },
+        "spin-5x": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(1800deg)" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -155,6 +159,7 @@ export default {
         "pendulum-left": "pendulum-left 2s ease-in-out infinite",
         "pendulum-center": "pendulum-center 2s ease-in-out infinite 0.2s",
         "pendulum-right": "pendulum-right 2s ease-in-out infinite 0.4s",
+        "spin-5x": "spin-5x 1s ease-in-out",
       },
     },
   },
