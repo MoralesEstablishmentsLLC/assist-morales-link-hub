@@ -148,7 +148,7 @@ export default {
         },
         "spin-5x": {
           "0%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(1800deg)" }
+          "100%": { transform: "rotate(3600deg)" }
         },
       },
       animation: {
