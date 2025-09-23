@@ -182,7 +182,7 @@ export default {
         "pendulum-center": "pendulum-center 2s ease-in-out infinite 0.2s",
         "pendulum-right": "pendulum-right 2s ease-in-out infinite 0.4s",
         "spin-5x": "spin-5x 1s ease-in-out",
-        "color-shift": "color-shift 3s ease-in-out infinite",
+        "color-shift": "color-shift 1s ease-in-out",
       },
     },
   },
