@@ -51,45 +51,45 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300 hover:animate-color-shift">
+            <Card className="shadow-card hover:shadow-elegant transition-all duration-500 hover:bg-gradient-to-br hover:from-purple-500/10 hover:to-pink-500/10 hover:border-purple-400/30 hover:shadow-lg hover:shadow-purple-500/20 group">
               <CardHeader className="text-center">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-8 h-8 text-primary" />
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300 group-hover:bg-purple-500/20">
+                  <Globe className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-purple-400" />
                 </div>
-                <CardTitle className="text-xl">Web Development</CardTitle>
+                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-purple-300">Web Development</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground transition-colors duration-300 group-hover:text-purple-200">
                   Custom websites that showcase your brand and drive business growth with modern, 
                   responsive designs that work perfectly on all devices.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300 hover:animate-color-shift">
+            <Card className="shadow-card hover:shadow-elegant transition-all duration-500 hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-cyan-500/10 hover:border-blue-400/30 hover:shadow-lg hover:shadow-blue-500/20 group">
               <CardHeader className="text-center">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-primary" />
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300 group-hover:bg-blue-500/20">
+                  <Users className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-blue-400" />
                 </div>
-                <CardTitle className="text-xl">Business Connections</CardTitle>
+                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-blue-300">Business Connections</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground transition-colors duration-300 group-hover:text-blue-200">
                   Access our extensive network of diverse businesses and strategic partnerships 
                   that can help expand your reach and create new opportunities.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300 hover:animate-color-shift">
+            <Card className="shadow-card hover:shadow-elegant transition-all duration-500 hover:bg-gradient-to-br hover:from-green-500/10 hover:to-emerald-500/10 hover:border-green-400/30 hover:shadow-lg hover:shadow-green-500/20 group">
               <CardHeader className="text-center">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-primary" />
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300 group-hover:bg-green-500/20">
+                  <Zap className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-green-400" />
                 </div>
-                <CardTitle className="text-xl">Digital Strategy</CardTitle>
+                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-green-300">Digital Strategy</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground transition-colors duration-300 group-hover:text-green-200">
                   Strategic consultation and planning to optimize your digital presence and 
                   maximize your online potential in today's competitive market.
                 </p>
