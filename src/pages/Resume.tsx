@@ -178,27 +178,22 @@ const Resume = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">UC Merced Bobcats</h3>
                 <p className="text-blue-400 font-medium mb-4">Collegiate Track & Field Athlete</p>
                 
-                <h4 className="font-semibold text-white mb-3">2025 Season Personal Records</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-black/30 p-4 rounded-lg border border-gray-700">
-                    <p className="text-gray-400 text-sm mb-1">400 Meters</p>
-                    <p className="text-2xl font-bold text-blue-400">51.67</p>
-                    <p className="text-gray-500 text-sm mt-1">Team: 2nd Place</p>
-                  </div>
-                  <div className="bg-black/30 p-4 rounded-lg border border-gray-700">
+                <h4 className="font-semibold text-white mb-3">School Records</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-black/30 p-4 rounded-lg border border-blue-500/50">
                     <p className="text-gray-400 text-sm mb-1">800 Meters</p>
                     <p className="text-2xl font-bold text-blue-400">1:53.26</p>
-                    <p className="text-gray-500 text-sm mt-1">Team: 1st Place</p>
+                    <p className="text-yellow-400 text-sm mt-1 font-semibold">🏆 School Record</p>
                   </div>
-                  <div className="bg-black/30 p-4 rounded-lg border border-gray-700">
-                    <p className="text-gray-400 text-sm mb-1">1500 Meters</p>
-                    <p className="text-2xl font-bold text-blue-400">4:13.31</p>
-                    <p className="text-gray-500 text-sm mt-1">Team: 5th Place</p>
+                  <div className="bg-black/30 p-4 rounded-lg border border-blue-500/50">
+                    <p className="text-gray-400 text-sm mb-1">4x400 Relay</p>
+                    <p className="text-2xl font-bold text-blue-400">3:23.72</p>
+                    <p className="text-yellow-400 text-sm mt-1 font-semibold">🏆 School Record</p>
                   </div>
-                  <div className="bg-black/30 p-4 rounded-lg border border-gray-700">
-                    <p className="text-gray-400 text-sm mb-1">1600 Meters</p>
-                    <p className="text-2xl font-bold text-blue-400">4:20.32</p>
-                    <p className="text-gray-500 text-sm mt-1">Personal Best</p>
+                  <div className="bg-black/30 p-4 rounded-lg border border-blue-500/50">
+                    <p className="text-gray-400 text-sm mb-1">4x800 Relay</p>
+                    <p className="text-2xl font-bold text-blue-400">7:36.82</p>
+                    <p className="text-yellow-400 text-sm mt-1 font-semibold">🏆 School Record</p>
                   </div>
                 </div>
               </div>
