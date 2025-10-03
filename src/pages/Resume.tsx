@@ -155,6 +155,55 @@ const Resume = () => {
               </div>
             </CardContent>
           </Card>
+
+          {/* Athletics */}
+          <Card 
+            className="shadow-card bg-gray-900 border-gray-800 transition-all duration-700 delay-700 opacity-100 translate-y-0"
+          >
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-blue-400">Track & Field Athletics</CardTitle>
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
+                  onClick={() => window.open('https://www.athletic.net/athlete/27400231/track-and-field', '_blank')}
+                >
+                  View Full Profile
+                </Button>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">UC Merced Bobcats</h3>
+                <p className="text-blue-400 font-medium mb-4">Collegiate Track & Field Athlete</p>
+                
+                <h4 className="font-semibold text-white mb-3">2025 Season Personal Records</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-black/30 p-4 rounded-lg border border-gray-700">
+                    <p className="text-gray-400 text-sm mb-1">400 Meters</p>
+                    <p className="text-2xl font-bold text-blue-400">51.67</p>
+                    <p className="text-gray-500 text-sm mt-1">Team: 2nd Place</p>
+                  </div>
+                  <div className="bg-black/30 p-4 rounded-lg border border-gray-700">
+                    <p className="text-gray-400 text-sm mb-1">800 Meters</p>
+                    <p className="text-2xl font-bold text-blue-400">1:53.26</p>
+                    <p className="text-gray-500 text-sm mt-1">Team: 1st Place</p>
+                  </div>
+                  <div className="bg-black/30 p-4 rounded-lg border border-gray-700">
+                    <p className="text-gray-400 text-sm mb-1">1500 Meters</p>
+                    <p className="text-2xl font-bold text-blue-400">4:13.31</p>
+                    <p className="text-gray-500 text-sm mt-1">Team: 5th Place</p>
+                  </div>
+                  <div className="bg-black/30 p-4 rounded-lg border border-gray-700">
+                    <p className="text-gray-400 text-sm mb-1">1600 Meters</p>
+                    <p className="text-2xl font-bold text-blue-400">4:20.32</p>
+                    <p className="text-gray-500 text-sm mt-1">Personal Best</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </main>
     </div>;
