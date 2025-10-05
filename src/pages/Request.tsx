@@ -26,7 +26,7 @@ const Request = () => {
   const {
     toast
   } = useToast();
-  const serviceOptions = ["Web Development", "E-commerce Solutions", "Digital Marketing", "SEO Optimization", "Branding & Design", "Business Consulting", "Mobile App Development", "Database Management", "AI Integration"];
+  const serviceOptions = ["Web Development", "E-commerce Solutions", "Digital Marketing", "SEO Optimization", "Branding & Design", "Business Consulting", "Mobile App Development", "Database Management", "AI Integration", "Other"];
   const handleServiceChange = (service: string, checked: boolean) => {
     setFormData(prev => ({
       ...prev,
