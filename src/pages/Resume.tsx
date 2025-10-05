@@ -89,7 +89,7 @@ const Resume = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-white">Founder & Digital Consultant</h3>
+                <h3 className="text-lg font-semibold text-white">Founder and Developer</h3>
                 <p className="text-blue-400 font-medium">Experienced Coding Knowledge</p>
                 <ul className="mt-2 space-y-1 text-gray-300">
                   <li>• Provide comprehensive digital solutions for small businesses and companies</li>
