@@ -4,9 +4,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Building2, Globe, Users, X } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import TypeWriter from "@/components/TypeWriter";
 
 const ClientList = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
+  const networkSection = useScrollAnimation();
   
   const clients = [
     {
@@ -86,8 +89,21 @@ const ClientList = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredClients.map((client, index) => (
-            <Card key={index} className="shadow-card hover:shadow-elegant transition-shadow duration-300">
+          {filteredClients.map((client, index) => {
+            const ClientCard = () => {
+              const cardAnimation = useScrollAnimation();
+              
+              return (
+                <div
+                  ref={cardAnimation.ref}
+                  className={`transition-all duration-700 ${
+                    cardAnimation.isVisible
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-8'
+                  }`}
+                  style={{ transitionDelay: `${index * 150}ms` }}
+                >
+                  <Card className="shadow-card hover:shadow-elegant transition-shadow duration-300">
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div>
@@ -138,18 +154,31 @@ const ClientList = () => {
                 )}
               </CardContent>
             </Card>
-          ))}
-        </div>
+          </div>
+        );
+      };
+      
+      return <ClientCard key={index} />;
+    })}
+  </div>
 
         <div className="mt-16 text-center">
           <Card className="shadow-card bg-gradient-primary text-white">
             <CardContent className="py-12">
-              <Users className="w-12 h-12 mx-auto mb-4" />
-              <h2 className="text-2xl font-bold mb-4">Join Our Network</h2>
-              <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-                Ready to transform your business digitally? Connect with our network of successful 
-                businesses and take your company to the next level.
-              </p>
+              <div ref={networkSection.ref}>
+                <Users className="w-12 h-12 mx-auto mb-4" />
+                <h2 className="text-2xl font-bold mb-4">Join Our Network</h2>
+                <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto min-h-[3.5rem]">
+                  {networkSection.isVisible ? (
+                    <TypeWriter 
+                      text="Ready to transform your business digitally? Connect with our network of successful businesses and take your company to the next level."
+                      speed={30}
+                    />
+                  ) : (
+                    <span className="invisible">Ready to transform your business digitally? Connect with our network of successful businesses and take your company to the next level.</span>
+                  )}
+                </p>
+              </div>
               <Link to="/request">
                 <Button variant="secondary" size="lg">
                   Get Started Today
