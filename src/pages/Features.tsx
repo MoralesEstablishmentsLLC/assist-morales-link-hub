@@ -1,14 +1,21 @@
+import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Bot, Code, Database, Globe, MessageSquare, Zap, Smartphone, Shield, Cloud, Cpu, ChevronDown } from "lucide-react";
+import { Bot, Code, Database, Globe, MessageSquare, Zap, Smartphone, Shield, Cloud, Cpu, ChevronDown, RotateCcw } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EmailDemo } from "@/components/demos/EmailDemo";
 import AnimationDemo from "@/components/demos/AnimationDemo";
 import ResponsiveDemo from "@/components/demos/ResponsiveDemo";
 const Features = () => {
+  const [isAnimating, setIsAnimating] = useState(true);
+
+  const handleReplay = () => {
+    setIsAnimating(false);
+    setTimeout(() => setIsAnimating(true), 10);
+  };
   const features = [{
     icon: <Bot className="h-8 w-8" />,
     title: "AI Chatbots & Virtual Assistants",
@@ -108,7 +115,18 @@ const Features = () => {
         <section className="mb-20 animate-fade-in" style={{
         animationDelay: "0.2s"
       }}>
-          <h2 className="text-3xl font-bold text-center mb-12 animate-spin-5x">Technical Capabilities</h2>
+          <div className="text-center mb-12">
+            <h2 className={`text-3xl font-bold ${isAnimating ? 'animate-spin-5x' : ''}`}>Technical Capabilities</h2>
+            <Button 
+              onClick={handleReplay} 
+              variant="ghost" 
+              size="sm" 
+              className="mt-2 flex items-center gap-2 mx-auto"
+            >
+              <RotateCcw className="h-4 w-4" />
+              Replay Animation
+            </Button>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => <Card key={index} className="hover:shadow-lg transition-all duration-300 border-border hover:border-primary/20">
                 <CardHeader>
