@@ -178,7 +178,7 @@ const Index = () => {
                 <CardContent className="pt-6">
                   <Users className="w-12 h-12 text-primary mx-auto mb-4 transition-colors duration-300 group-hover:text-orange-400" />
                   <h3 className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-orange-300">10+</h3>
-                  <p className="text-muted-foreground transition-colors duration-300 group-hover:text-orange-200">Industries Served</p>
+                  <p className="text-muted-foreground transition-colors duration-300 group-hover:text-orange-200">5+ businesses served</p>
                 </CardContent>
               </Card>
             </div>
