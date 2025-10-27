@@ -11,11 +11,20 @@ import AnimationDemo from "@/components/demos/AnimationDemo";
 import ResponsiveDemo from "@/components/demos/ResponsiveDemo";
 const Features = () => {
   const [isAnimating, setIsAnimating] = useState(true);
+  const [showReplay, setShowReplay] = useState(false);
 
   const handleReplay = () => {
     setIsAnimating(false);
+    setShowReplay(false);
     setTimeout(() => setIsAnimating(true), 10);
+    setTimeout(() => setShowReplay(true), 1010); // Show after 1s animation completes
   };
+
+  // Show replay button after initial animation completes
+  useState(() => {
+    const timer = setTimeout(() => setShowReplay(true), 1000);
+    return () => clearTimeout(timer);
+  });
   const features = [{
     icon: <Bot className="h-8 w-8" />,
     title: "AI Chatbots & Virtual Assistants",
@@ -117,15 +126,17 @@ const Features = () => {
       }}>
           <div className="text-center mb-12">
             <h2 className={`text-3xl font-bold ${isAnimating ? 'animate-spin-5x' : ''}`}>Technical Capabilities</h2>
-            <Button 
-              onClick={handleReplay} 
-              variant="ghost" 
-              size="sm" 
-              className="mt-2 flex items-center gap-2 mx-auto"
-            >
-              <RotateCcw className="h-4 w-4" />
-              Replay Animation
-            </Button>
+            {showReplay && (
+              <Button 
+                onClick={handleReplay} 
+                variant="ghost" 
+                size="sm" 
+                className="mt-2 flex items-center gap-2 mx-auto animate-fade-in"
+              >
+                <RotateCcw className="h-4 w-4" />
+                Replay Animation
+              </Button>
+            )}
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => <Card key={index} className="hover:shadow-lg transition-all duration-300 border-border hover:border-primary/20">
