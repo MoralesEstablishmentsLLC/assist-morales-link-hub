@@ -153,7 +153,7 @@ const Index = () => {
               <Card className="shadow-card text-center transition-all duration-500 hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-cyan-500/10 hover:border-blue-400/30 hover:shadow-lg hover:shadow-blue-500/20 group">
                 <CardContent className="pt-6">
                   <Building2 className="w-12 h-12 text-primary mx-auto mb-4 transition-colors duration-300 group-hover:text-blue-400" />
-                  <h3 className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-blue-300">50+</h3>
+                  <h3 className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-blue-300">Multiple</h3>
                   <p className="text-muted-foreground transition-colors duration-300 group-hover:text-blue-200">Happy Clients</p>
                 </CardContent>
               </Card>
