@@ -9,7 +9,7 @@ const navigation = [
   { name: "Client List", path: "/clients", icon: Users },
   { name: "Explore Features", path: "/features", icon: Sparkles },
   { name: "Request", path: "/request", icon: MessageCircle },
-  { name: "Edit Site", path: "/edit-site", icon: Edit },
+  { name: "Develop Site", path: "/edit-site", icon: Edit },
   { name: "Contact", path: "/contact", icon: Phone },
 ];
 
