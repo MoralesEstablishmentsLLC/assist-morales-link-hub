@@ -34,8 +34,8 @@ const Features = () => {
   }, {
     icon: <MessageSquare className="h-8 w-8" />,
     title: "Social Media Management",
-    description: "Full-service management across all platforms with content creation and engagement",
-    technologies: ["Multi-Platform Posting", "Content Calendar", "Community Management", "Analytics"],
+    description: "Full-service management across all platforms including Instagram, Facebook, Pinterest, TikTok, LinkedIn, and Twitter with content creation and engagement",
+    technologies: ["Instagram", "Facebook", "Pinterest", "TikTok", "LinkedIn", "Twitter"],
     color: "bg-purple-500/10 text-purple-600"
   }, {
     icon: <Zap className="h-8 w-8" />,
