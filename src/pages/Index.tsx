@@ -61,7 +61,7 @@ const Index = () => {
               <CardContent className="text-center">
                 <p className="text-muted-foreground transition-colors duration-300 group-hover:text-purple-200">
                   Complete management of your digital assets including websites, content libraries, brand materials, 
-                  and online resources - all organized and optimized for maximum impact.
+                  billing management, and online resources - all organized and optimized for maximum impact.
                 </p>
               </CardContent>
             </Card>
