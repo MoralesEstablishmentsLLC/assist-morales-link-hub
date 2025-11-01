@@ -2,7 +2,7 @@ import TypeWriter from "@/components/TypeWriter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowRight, Globe, Users, Zap, CheckCircle, Building2, Target } from "lucide-react";
+import { ArrowRight, Globe, Users, Zap, CheckCircle, Building2, Target, TrendingUp } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const Index = () => {
   const { ref: benefitsRef, isVisible: benefitsVisible } = useScrollAnimation(0.3);
@@ -54,7 +54,7 @@ const Index = () => {
             <Card className="shadow-card hover:shadow-elegant transition-all duration-500 hover:bg-gradient-to-br hover:from-purple-500/10 hover:to-pink-500/10 hover:border-purple-400/30 hover:shadow-lg hover:shadow-purple-500/20 group">
               <CardHeader className="text-center">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300 group-hover:bg-purple-500/20">
-                  <Globe className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-purple-400" />
+                  <Users className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-purple-400" />
                 </div>
                 <CardTitle className="text-xl transition-colors duration-300 group-hover:text-purple-300">Digital Asset Management</CardTitle>
               </CardHeader>
@@ -69,14 +69,14 @@ const Index = () => {
             <Card className="shadow-card hover:shadow-elegant transition-all duration-500 hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-cyan-500/10 hover:border-blue-400/30 hover:shadow-lg hover:shadow-blue-500/20 group">
               <CardHeader className="text-center">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300 group-hover:bg-blue-500/20">
-                  <Users className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-blue-400" />
+                  <Globe className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-blue-400" />
                 </div>
-                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-blue-300">Social Media Management</CardTitle>
+                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-blue-300">Web Development</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground transition-colors duration-300 group-hover:text-blue-200">
-                  Full-service social media management including content creation, posting schedules, 
-                  community engagement, and analytics - keeping your brand active and growing across all platforms.
+                  Custom websites and web applications built with modern technologies. From landing pages to 
+                  complex platforms - responsive, fast, and optimized for your business goals.
                 </p>
               </CardContent>
             </Card>
@@ -84,14 +84,14 @@ const Index = () => {
             <Card className="shadow-card hover:shadow-elegant transition-all duration-500 hover:bg-gradient-to-br hover:from-green-500/10 hover:to-emerald-500/10 hover:border-green-400/30 hover:shadow-lg hover:shadow-green-500/20 group">
               <CardHeader className="text-center">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300 group-hover:bg-green-500/20">
-                  <Zap className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-green-400" />
+                  <TrendingUp className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-green-400" />
                 </div>
-                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-green-300">Marketing Strategies</CardTitle>
+                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-green-300">Marketing & Social Media</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground transition-colors duration-300 group-hover:text-green-200">
-                  Data-driven marketing strategies tailored to your business goals. From SEO and content marketing 
-                  to paid advertising campaigns - we create comprehensive plans that deliver measurable results.
+                  Comprehensive marketing strategies and social media management. From content creation and campaigns 
+                  to community engagement and analytics - we grow your online presence and drive real results.
                 </p>
               </CardContent>
             </Card>
