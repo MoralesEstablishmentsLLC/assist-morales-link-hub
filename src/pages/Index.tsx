@@ -75,8 +75,8 @@ const Index = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground transition-colors duration-300 group-hover:text-blue-200">
-                  Custom websites and web applications built with modern technologies. From landing pages to 
-                  complex platforms - responsive, fast, and optimized for your business goals.
+                  Custom websites and web applications built with modern technologies. We create sites to do any task - 
+                  from landing pages to complex platforms - responsive, fast, and optimized for your business goals.
                 </p>
               </CardContent>
             </Card>
