@@ -26,7 +26,18 @@ const Request = () => {
   const {
     toast
   } = useToast();
-  const serviceOptions = ["Web Development", "E-commerce Solutions", "Digital Marketing", "SEO Optimization", "Branding & Design", "Business Consulting", "Mobile App Development", "Database Management", "AI Integration", "Other"];
+  const serviceOptions = [
+    "Digital Asset Management",
+    "Social Media Management", 
+    "Marketing Strategy Development",
+    "Content Creation & Curation",
+    "SEO & Analytics",
+    "Paid Advertising Campaigns",
+    "Email Marketing",
+    "Brand Management",
+    "Web Development & Maintenance",
+    "Other"
+  ];
   const handleServiceChange = (service: string, checked: boolean) => {
     setFormData(prev => ({
       ...prev,
@@ -80,7 +91,7 @@ const Request = () => {
         <div className="mb-12 text-center animate-fade-in">
           <h1 className="text-4xl font-bold text-white mb-4">Request Services</h1>
           <TypeWriter 
-            text="Ready to take your business to the next level? Fill out the form below and let's discuss how we can help you succeed in the digital world."
+            text="Let us manage your complete online presence. Fill out the form below and discover how our comprehensive services can transform your digital operations."
             speed={50}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           />
@@ -139,11 +150,11 @@ const Request = () => {
                           <SelectValue placeholder="Select project type" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="new-website">New Website</SelectItem>
-                          <SelectItem value="redesign">Website Redesign</SelectItem>
-                          <SelectItem value="ecommerce">E-commerce Store</SelectItem>
-                          <SelectItem value="consultation">Business Consultation</SelectItem>
-                          <SelectItem value="maintenance">Website Maintenance</SelectItem>
+                          <SelectItem value="full-management">Complete Online Management</SelectItem>
+                          <SelectItem value="social-media">Social Media Management</SelectItem>
+                          <SelectItem value="marketing">Marketing Strategy & Campaigns</SelectItem>
+                          <SelectItem value="asset-management">Digital Asset Management</SelectItem>
+                          <SelectItem value="content">Content Creation & Management</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>

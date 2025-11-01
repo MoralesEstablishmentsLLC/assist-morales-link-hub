@@ -16,8 +16,8 @@ const Index = () => {
             <TypeWriter text="MorAssist" speed={150} />
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-            Empowering small businesses and companies to thrive in the digital world through 
-            innovative web solutions and strategic business connections.
+            Your complete online services partner. We manage your digital assets, craft winning marketing strategies, 
+            and amplify your social media presence - so you can focus on running your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/clients">
@@ -44,9 +44,9 @@ const Index = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-6">How We Help Your Business Grow</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-6">Complete Online Management Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We provide comprehensive digital solutions that transform the way you do business online.
+              From digital assets to social media campaigns, we handle every aspect of your online presence so you can focus on what matters most.
             </p>
           </div>
 
@@ -56,12 +56,12 @@ const Index = () => {
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300 group-hover:bg-purple-500/20">
                   <Globe className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-purple-400" />
                 </div>
-                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-purple-300">Web Development</CardTitle>
+                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-purple-300">Digital Asset Management</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground transition-colors duration-300 group-hover:text-purple-200">
-                  Custom websites that showcase your brand and drive business growth with modern, 
-                  responsive designs that work perfectly on all devices.
+                  Complete management of your digital assets including websites, content libraries, brand materials, 
+                  and online resources - all organized and optimized for maximum impact.
                 </p>
               </CardContent>
             </Card>
@@ -71,12 +71,12 @@ const Index = () => {
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300 group-hover:bg-blue-500/20">
                   <Users className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-blue-400" />
                 </div>
-                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-blue-300">Business Connections</CardTitle>
+                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-blue-300">Social Media Management</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground transition-colors duration-300 group-hover:text-blue-200">
-                  Access our extensive network of diverse businesses and strategic partnerships 
-                  that can help expand your reach and create new opportunities.
+                  Full-service social media management including content creation, posting schedules, 
+                  community engagement, and analytics - keeping your brand active and growing across all platforms.
                 </p>
               </CardContent>
             </Card>
@@ -86,12 +86,12 @@ const Index = () => {
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300 group-hover:bg-green-500/20">
                   <Zap className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-green-400" />
                 </div>
-                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-green-300">Digital Strategy</CardTitle>
+                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-green-300">Marketing Strategies</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground transition-colors duration-300 group-hover:text-green-200">
-                  Strategic consultation and planning to optimize your digital presence and 
-                  maximize your online potential in today's competitive market.
+                  Data-driven marketing strategies tailored to your business goals. From SEO and content marketing 
+                  to paid advertising campaigns - we create comprehensive plans that deliver measurable results.
                 </p>
               </CardContent>
             </Card>
@@ -105,11 +105,11 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-foreground mb-6">
-                Why Small Businesses Choose Morales Assist
+                Why Businesses Choose MorAssist
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                We understand the unique challenges small businesses face in the digital landscape. 
-                Our personalized approach ensures every solution is tailored to your specific needs and goals.
+                Managing your entire online presence shouldn't be overwhelming. We handle everything - from your website 
+                and social media to marketing campaigns and digital assets - with a personalized approach that fits your business.
               </p>
               
               <div ref={benefitsRef} className="space-y-4">
@@ -120,8 +120,8 @@ const Index = () => {
                 }`}>
                   <CheckCircle className="w-6 h-6 text-primary mt-1" />
                   <div>
-                    <h4 className="font-semibold text-foreground">Personalized Service</h4>
-                    <p className="text-muted-foreground">Direct communication with experienced professionals who understand your industry.</p>
+                    <h4 className="font-semibold text-foreground">All-In-One Solution</h4>
+                    <p className="text-muted-foreground">One team managing all your online services - no more juggling multiple vendors and platforms.</p>
                   </div>
                 </div>
                 <div className={`flex items-start gap-3 transition-all duration-700 ${
@@ -131,8 +131,8 @@ const Index = () => {
                 }`}>
                   <CheckCircle className="w-6 h-6 text-primary mt-1" />
                   <div>
-                    <h4 className="font-semibold text-foreground">Proven Results</h4>
-                    <p className="text-muted-foreground">Track record of helping businesses increase their online presence and revenue.</p>
+                    <h4 className="font-semibold text-foreground">Strategic Growth</h4>
+                    <p className="text-muted-foreground">Custom marketing strategies and social media campaigns designed to grow your audience and revenue.</p>
                   </div>
                 </div>
                 <div className={`flex items-start gap-3 transition-all duration-700 ${
@@ -142,8 +142,8 @@ const Index = () => {
                 }`}>
                   <CheckCircle className="w-6 h-6 text-primary mt-1" />
                   <div>
-                    <h4 className="font-semibold text-foreground">Ongoing Support</h4>
-                    <p className="text-muted-foreground">Continuous support and maintenance to keep your digital assets running smoothly.</p>
+                    <h4 className="font-semibold text-foreground">Complete Management</h4>
+                    <p className="text-muted-foreground">We handle updates, analytics, content creation, and engagement - keeping your online presence active and effective.</p>
                   </div>
                 </div>
               </div>
@@ -191,10 +191,10 @@ const Index = () => {
         <div className="max-w-4xl mx-auto text-center">
           <Card className="shadow-elegant bg-gradient-primary text-white">
             <CardContent className="py-16">
-              <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+              <h2 className="text-4xl font-bold mb-6">Ready to Elevate Your Online Presence?</h2>
               <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-                Join our network of successful businesses and discover the connections that can 
-                take your company to the next level. Your digital transformation starts here.
+                Let us handle your entire online operation. From asset management and marketing strategies to 
+                social media engagement - we'll grow your digital presence while you focus on your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/clients">

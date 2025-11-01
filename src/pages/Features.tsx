@@ -26,73 +26,73 @@ const Features = () => {
     return () => clearTimeout(timer);
   });
   const features = [{
-    icon: <Bot className="h-8 w-8" />,
-    title: "AI Chatbots & Virtual Assistants",
-    description: "Custom chatbots that understand your business and provide 24/7 customer support",
-    technologies: ["Advanced AI Models", "Natural Language Processing", "Real-time Chat", "Voice Integration"],
-    color: "bg-blue-500/10 text-blue-600",
-    demo: "/chatbot"
+    icon: <Globe className="h-8 w-8" />,
+    title: "Digital Asset Management",
+    description: "Complete organization and optimization of all your digital assets in one centralized system",
+    technologies: ["Content Libraries", "Brand Guidelines", "File Management", "Version Control"],
+    color: "bg-blue-500/10 text-blue-600"
   }, {
     icon: <MessageSquare className="h-8 w-8" />,
-    title: "Conversational AI",
-    description: "Advanced voice and text-based AI that can have natural conversations with users",
-    technologies: ["Speech Recognition", "Text-to-Speech", "Context Awareness", "Multi-turn Dialogue"],
+    title: "Social Media Management",
+    description: "Full-service management across all platforms with content creation and engagement",
+    technologies: ["Multi-Platform Posting", "Content Calendar", "Community Management", "Analytics"],
     color: "bg-purple-500/10 text-purple-600"
   }, {
     icon: <Zap className="h-8 w-8" />,
-    title: "Automation & Workflows",
-    description: "Smart bots that automate repetitive tasks and streamline business processes",
-    technologies: ["Task Automation", "API Integration", "Scheduled Jobs", "Webhook Processing"],
+    title: "Marketing Strategy",
+    description: "Data-driven marketing campaigns designed to grow your audience and increase conversions",
+    technologies: ["SEO Strategy", "Content Marketing", "Campaign Planning", "Performance Tracking"],
     color: "bg-yellow-500/10 text-yellow-600"
   }, {
     icon: <Database className="h-8 w-8" />,
-    title: "Backend & Database Systems",
-    description: "Robust server architecture with real-time data processing and secure storage",
-    technologies: ["Supabase", "PostgreSQL", "Real-time Subscriptions", "Row Level Security"],
+    title: "Content Creation",
+    description: "Professional content creation including graphics, videos, and written content",
+    technologies: ["Graphic Design", "Video Production", "Copywriting", "Brand Storytelling"],
     color: "bg-green-500/10 text-green-600"
   }, {
-    icon: <Globe className="h-8 w-8" />,
-    title: "Modern Web Applications",
-    description: "Fast, responsive websites built with cutting-edge technologies",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Progressive Web Apps"],
+    icon: <Shield className="h-8 w-8" />,
+    title: "Analytics & Reporting",
+    description: "Comprehensive analytics and insights to track performance and optimize strategies",
+    technologies: ["Performance Metrics", "ROI Tracking", "Audience Insights", "Custom Reports"],
     color: "bg-indigo-500/10 text-indigo-600"
   }, {
     icon: <Smartphone className="h-8 w-8" />,
-    title: "Mobile-First Design",
-    description: "Responsive designs that work perfectly on all devices and screen sizes",
-    technologies: ["Mobile Optimization", "Touch Interfaces", "Cross-Platform", "Performance"],
+    title: "Paid Advertising",
+    description: "Managed ad campaigns across Google, Facebook, Instagram, and other platforms",
+    technologies: ["Google Ads", "Social Media Ads", "Retargeting", "Budget Optimization"],
     color: "bg-pink-500/10 text-pink-600"
   }, {
-    icon: <Shield className="h-8 w-8" />,
-    title: "Security & Authentication",
-    description: "Enterprise-grade security with user authentication and data protection",
-    technologies: ["OAuth", "JWT Tokens", "Rate Limiting", "Data Encryption"],
-    color: "bg-red-500/10 text-red-600"
+    icon: <Code className="h-8 w-8" />,
+    title: "Email Marketing",
+    description: "Strategic email campaigns that nurture leads and drive customer engagement",
+    technologies: ["Campaign Design", "List Management", "Automation", "A/B Testing"],
+    color: "bg-red-500/10 text-red-600",
+    demo: "/chatbot"
   }, {
     icon: <Cloud className="h-8 w-8" />,
-    title: "Cloud Integration",
-    description: "Seamless integration with cloud services for scalability and reliability",
-    technologies: ["Edge Functions", "CDN", "Auto-scaling", "Global Distribution"],
+    title: "Website Management",
+    description: "Complete website management including updates, optimization, and maintenance",
+    technologies: ["CMS Management", "Performance Optimization", "Security Updates", "Backup Systems"],
     color: "bg-cyan-500/10 text-cyan-600"
   }, {
     icon: <Cpu className="h-8 w-8" />,
-    title: "AI Model Integration",
-    description: "Custom AI models and machine learning solutions for specific business needs",
-    technologies: ["Custom Models", "ML Pipelines", "Data Analysis", "Predictive Analytics"],
+    title: "Brand Management",
+    description: "Consistent brand presence across all channels with strategic positioning",
+    technologies: ["Brand Guidelines", "Voice & Tone", "Visual Identity", "Reputation Management"],
     color: "bg-orange-500/10 text-orange-600"
   }];
   const showcaseProjects = [{
-    title: "Intelligent Customer Support Bot",
-    description: "AI-powered chatbot that handles customer inquiries, processes orders, and escalates complex issues",
-    features: ["Natural Language Understanding", "Order Processing", "Multi-language Support", "Analytics Dashboard"]
+    title: "Full-Service Package",
+    description: "Complete online management including social media, marketing, and asset management for a retail business",
+    features: ["Daily Social Posts", "Monthly Marketing Reports", "Asset Organization", "Brand Consistency"]
   }, {
-    title: "Personal Assistant AI",
-    description: "Voice-activated assistant that manages schedules, sends reminders, and automates daily tasks",
-    features: ["Voice Recognition", "Calendar Integration", "Task Automation", "Smart Notifications"]
+    title: "Social Media Growth",
+    description: "Comprehensive social media strategy that increased engagement by 300% in 3 months",
+    features: ["Content Calendar", "Community Engagement", "Influencer Outreach", "Analytics Tracking"]
   }, {
-    title: "Content Generation Bot",
-    description: "AI that creates marketing content, social media posts, and personalized recommendations",
-    features: ["Content Writing", "Image Generation", "SEO Optimization", "Brand Voice Matching"]
+    title: "Marketing Campaign Success",
+    description: "Multi-channel marketing strategy that doubled website traffic and increased conversions by 150%",
+    features: ["SEO Optimization", "Paid Advertising", "Email Campaigns", "Performance Analytics"]
   }];
   return <div className="min-h-screen bg-background">
       
@@ -102,8 +102,8 @@ const Features = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6" style={{
           animation: 'bounce-3s 3s ease-in-out'
         }}>
-            Explore Development
-            <span className="text-primary"> Features</span>
+            Complete Online
+            <span className="text-primary"> Services</span>
           </h1>
           
           <div className="flex flex-wrap gap-4 justify-center">
@@ -125,7 +125,7 @@ const Features = () => {
         animationDelay: "0.2s"
       }}>
           <div className="text-center mb-12">
-            <h2 className={`text-3xl font-bold ${isAnimating ? 'animate-spin-5x' : ''}`}>Technical Capabilities</h2>
+            <h2 className={`text-3xl font-bold ${isAnimating ? 'animate-spin-5x' : ''}`}>Our Service Capabilities</h2>
             {showReplay && (
               <Button 
                 onClick={handleReplay} 
@@ -169,9 +169,9 @@ const Features = () => {
         <section className="mb-20 animate-fade-in" style={{
         animationDelay: "0.4s"
       }}>
-          <h2 className="text-3xl font-bold text-center mb-12">Interactive Feature Demos</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Service Demonstrations</h2>
           <p className="text-center text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Experience our technical capabilities firsthand with these interactive demonstrations
+            See how our online management services work with these interactive examples
           </p>
           
           <Tabs defaultValue="email" className="w-full">
@@ -201,7 +201,7 @@ const Features = () => {
         <section className="mb-20 animate-fade-in bg-gradient-to-r from-gray-900 via-black to-gray-900 rounded-2xl p-12" style={{
         animationDelay: "0.6s"
       }}>
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">Bot Showcase</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">Success Stories</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {showcaseProjects.map((project, index) => 
               <DropdownMenu key={index}>
@@ -243,9 +243,9 @@ const Features = () => {
         <section className="text-center bg-card rounded-2xl p-12 animate-fade-in" style={{
         animationDelay: "0.8s"
       }}>
-          <h2 className="text-3xl font-bold mb-4">Ready to Build Something Amazing?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Online Presence?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can leverage these technologies to create custom solutions for your business needs.
+            Let us manage your complete online operation while you focus on growing your business.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/request">
