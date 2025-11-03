@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Bot, Code, Database, Globe, MessageSquare, Zap, Smartphone, Shield, Cloud, Cpu, ChevronDown, RotateCcw } from "lucide-react";
+import { Bot, Code, Database, Globe, MessageSquare, Zap, Smartphone, Shield, Cloud, Cpu, ChevronDown, RotateCcw, Lock, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { EmailDemo } from "@/components/demos/EmailDemo";
 import AnimationDemo from "@/components/demos/AnimationDemo";
@@ -236,6 +236,39 @@ const Features = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             )}
+          </div>
+          
+          {/* Security Achievements */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            <Card className="bg-white/5 border-green-500/30 hover:border-green-500/50 transition-all">
+              <CardContent className="pt-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/20 flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-green-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">SOC 2 Compliant</h3>
+                <p className="text-sm text-gray-400">Enterprise-grade security standards for all client projects</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/5 border-blue-500/30 hover:border-blue-500/50 transition-all">
+              <CardContent className="pt-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500/20 flex items-center justify-center">
+                  <Lock className="h-8 w-8 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">SSL/TLS Encryption</h3>
+                <p className="text-sm text-gray-400">All data encrypted in transit with industry-leading protocols</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/5 border-purple-500/30 hover:border-purple-500/50 transition-all">
+              <CardContent className="pt-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-500/20 flex items-center justify-center">
+                  <CheckCircle className="h-8 w-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">GDPR & CCPA Ready</h3>
+                <p className="text-sm text-gray-400">Full compliance with global privacy regulations</p>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
