@@ -239,28 +239,43 @@ const Features = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-            <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer bg-white/5 border-white/10">
-              <CardHeader>
-                <CardTitle className="text-xl flex items-center gap-2 text-white">
-                  <Shield className="h-5 w-5 text-green-400" />
-                  Security & Compliance
-                </CardTitle>
-                <CardDescription className="text-gray-400 mt-3 space-y-2">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-400" />
-                    <span>SOC 2 Compliant</span>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer bg-white/5 border-white/10">
+                  <CardHeader>
+                    <CardTitle className="text-xl flex items-center gap-2 text-white">
+                      <Shield className="h-5 w-5 text-green-400" />
+                      Security & Compliance
+                      <ChevronDown className="h-4 w-4 ml-auto" />
+                    </CardTitle>
+                  </CardHeader>
+                </Card>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-80 p-4 bg-gray-800 border-gray-600 z-50">
+                <div className="space-y-3">
+                  <p className="text-gray-300 text-sm">
+                    Enterprise-grade security standards and compliance certifications
+                  </p>
+                  <div className="space-y-2">
+                    <h4 className="text-white font-medium text-sm">Security Features:</h4>
+                    <ul className="space-y-1">
+                      <li className="text-sm text-gray-300 flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                        SOC 2 Compliant
+                      </li>
+                      <li className="text-sm text-gray-300 flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                        SSL/TLS Encrypted
+                      </li>
+                      <li className="text-sm text-gray-300 flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        GDPR & CCPA Ready
+                      </li>
+                    </ul>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Lock className="h-4 w-4 text-blue-400" />
-                    <span>SSL/TLS Encrypted</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-purple-400" />
-                    <span>GDPR & CCPA Ready</span>
-                  </div>
-                </CardDescription>
-              </CardHeader>
-            </Card>
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </section>
 
