@@ -56,7 +56,7 @@ const Index = () => {
             duration: 0.6,
             delay: 0.2
           }}>
-              <span className="text-foreground">
+              <span className="gradient-text">
                 <TypeWriter text="MorAssist" speed={150} />
               </span>
             </motion.h1>
@@ -70,10 +70,7 @@ const Index = () => {
           }} transition={{
             duration: 0.6,
             delay: 0.4
-          }}>
-              Your complete online services partner. We manage your digital assets, craft winning marketing strategies, 
-              and amplify your social media presence - so you can focus on running your business.
-            </motion.p>
+          }}>Your complete online services partner. We manage your digital assets, craft winning marketing strategies, and amplify your social media presence so you can focus on running your business.</motion.p>
             
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" initial={{
             opacity: 0,
