@@ -243,26 +243,22 @@ const Features = () => {
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2 text-white">
                   <Shield className="h-5 w-5 text-green-400" />
-                  SOC 2 Compliant
+                  Security & Compliance
                 </CardTitle>
-              </CardHeader>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer bg-white/5 border-white/10">
-              <CardHeader>
-                <CardTitle className="text-xl flex items-center gap-2 text-white">
-                  <Lock className="h-5 w-5 text-blue-400" />
-                  SSL/TLS Encrypted
-                </CardTitle>
-              </CardHeader>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer bg-white/5 border-white/10">
-              <CardHeader>
-                <CardTitle className="text-xl flex items-center gap-2 text-white">
-                  <CheckCircle className="h-5 w-5 text-purple-400" />
-                  GDPR & CCPA Ready
-                </CardTitle>
+                <CardDescription className="text-gray-400 mt-3 space-y-2">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-400" />
+                    <span>SOC 2 Compliant</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Lock className="h-4 w-4 text-blue-400" />
+                    <span>SSL/TLS Encrypted</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-purple-400" />
+                    <span>GDPR & CCPA Ready</span>
+                  </div>
+                </CardDescription>
               </CardHeader>
             </Card>
           </div>
