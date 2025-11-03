@@ -238,20 +238,33 @@ const Features = () => {
             )}
           </div>
           
-          {/* Security Badges */}
-          <div className="mt-8 flex flex-wrap gap-3 justify-center">
-            <Badge variant="outline" className="text-green-400 border-green-400/30 px-4 py-2">
-              <Shield className="h-4 w-4 mr-2" />
-              SOC 2 Compliant
-            </Badge>
-            <Badge variant="outline" className="text-blue-400 border-blue-400/30 px-4 py-2">
-              <Lock className="h-4 w-4 mr-2" />
-              SSL/TLS Encrypted
-            </Badge>
-            <Badge variant="outline" className="text-purple-400 border-purple-400/30 px-4 py-2">
-              <CheckCircle className="h-4 w-4 mr-2" />
-              GDPR & CCPA Ready
-            </Badge>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer bg-white/5 border-white/10">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-2 text-white">
+                  <Shield className="h-5 w-5 text-green-400" />
+                  SOC 2 Compliant
+                </CardTitle>
+              </CardHeader>
+            </Card>
+            
+            <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer bg-white/5 border-white/10">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-2 text-white">
+                  <Lock className="h-5 w-5 text-blue-400" />
+                  SSL/TLS Encrypted
+                </CardTitle>
+              </CardHeader>
+            </Card>
+            
+            <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer bg-white/5 border-white/10">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-2 text-white">
+                  <CheckCircle className="h-5 w-5 text-purple-400" />
+                  GDPR & CCPA Ready
+                </CardTitle>
+              </CardHeader>
+            </Card>
           </div>
         </section>
 
