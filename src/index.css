@@ -153,35 +153,43 @@ All colors MUST be HSL.
 @layer utilities {
   /* Glassmorphism Effects */
   .glass {
-    @apply backdrop-blur-lg bg-white/10 border border-white/20;
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   .glass-card {
-    @apply backdrop-blur-md bg-white/5 border border-white/10 rounded-lg;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
   }
 
   /* Hover Effects */
   .hover-lift {
-    @apply transition-all duration-300 hover:shadow-elegant hover:-translate-y-1;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
   }
 
-  .hover-glow {
-    @apply transition-all duration-300 hover:shadow-glow;
-  }
-
+  /* Magnetic Hover */
   .magnetic-hover {
-    @apply transition-transform duration-200 ease-out;
+    transition: transform 0.2s ease-out;
   }
 
   /* Gradient Text */
   .gradient-text {
-    @apply bg-gradient-primary bg-clip-text text-transparent;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   /* Animated Gradient Background */
   .animated-gradient {
     background: linear-gradient(270deg, hsl(var(--brand-blue)), hsl(var(--brand-purple)), hsl(var(--brand-teal)));
     background-size: 600% 600%;
-    @apply animate-gradient-shift;
   }
 }

@@ -144,7 +144,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: service.delay }}
               >
-                <Card className="h-full hover-lift hover-glow border-${service.color}-500/20 group cursor-pointer">
+                <Card className="h-full hover-lift hover:shadow-glow border-${service.color}-500/20 group cursor-pointer">
                   <CardHeader className="text-center">
                     <motion.div 
                       className={`bg-brand-${service.color}/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}
