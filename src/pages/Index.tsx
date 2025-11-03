@@ -105,23 +105,7 @@ const Index = () => {
           </div>
 
           {/* Live Activity Feed */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 40
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8,
-          delay: 0.8
-        }} className="max-w-2xl mx-auto mt-20">
-            <div className="text-center mb-6">
-              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-                Live Activity
-              </h3>
-            </div>
-            <LiveActivityFeed />
-          </motion.div>
+          
         </div>
       </section>
 
@@ -318,35 +302,7 @@ const Index = () => {
 
       {/* Testimonials Section */}
       <section ref={testimonialsRef} className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div className="text-center mb-16" initial={{
-          opacity: 0,
-          y: 20
-        }} animate={testimonialsVisible ? {
-          opacity: 1,
-          y: 0
-        } : {}} transition={{
-          duration: 0.6
-        }}>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">What Our Clients Say</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Don't just take our word for it - hear from businesses we've helped transform their online presence.
-            </p>
-          </motion.div>
-          
-          <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} animate={testimonialsVisible ? {
-          opacity: 1,
-          y: 0
-        } : {}} transition={{
-          duration: 0.6,
-          delay: 0.3
-        }}>
-            <TestimonialCarousel />
-          </motion.div>
-        </div>
+        
       </section>
 
       {/* CTA Section */}
