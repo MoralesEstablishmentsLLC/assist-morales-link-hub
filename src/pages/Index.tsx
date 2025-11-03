@@ -130,7 +130,7 @@ const Index = () => {
             {[{
             icon: Users,
             title: "Digital Asset Management",
-            description: "Complete management of your digital assets including websites, content libraries, brand materials, billing management, and online resources - all organized and optimized for maximum impact.",
+            description: "Complete management of your digital assets including websites, content libraries, brand materials, billing management, crypto assets, and online resources - all organized and optimized for maximum impact.",
             color: "purple",
             delay: 0
           }, {
