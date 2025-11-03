@@ -56,7 +56,7 @@ const Index = () => {
             duration: 0.6,
             delay: 0.2
           }}>
-              <span className="gradient-text">
+              <span className="text-foreground">
                 <TypeWriter text="MorAssist" speed={150} />
               </span>
             </motion.h1>
