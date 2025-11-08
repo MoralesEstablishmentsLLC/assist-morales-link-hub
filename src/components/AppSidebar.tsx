@@ -1,4 +1,4 @@
-import { Home, User, Users, Sparkles, MessageCircle, Edit, Phone } from "lucide-react";
+import { Home, User, Users, Sparkles, MessageCircle, Edit, Phone, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { DrawerClose } from "@/components/ui/drawer";
@@ -19,7 +19,14 @@ export function AppSidebar() {
 
   return (
     <div className="p-4 h-full">
-      <h2 className="text-lg font-semibold mb-4">Navigation</h2>
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-lg font-semibold">Navigation</h2>
+        <DrawerClose asChild>
+          <Button variant="ghost" size="sm">
+            <X className="h-4 w-4" />
+          </Button>
+        </DrawerClose>
+      </div>
       <nav className="space-y-2">
         {navigation.map((item) => (
           <DrawerClose key={item.name} asChild>
