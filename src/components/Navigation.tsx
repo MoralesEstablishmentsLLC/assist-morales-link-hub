@@ -9,60 +9,24 @@ import {
 import { AppSidebar } from "@/components/AppSidebar";
 
 const Navigation = () => {
-  const location = useLocation();
-  const currentPath = location.pathname;
-
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Personal Resume", path: "/resume" },
-    { name: "Client List", path: "/clients" },
-    { name: "Explore Features", path: "/features" },
-    { name: "Request", path: "/request" },
-    { name: "Develop Site", path: "/edit-site" },
-    { name: "Contact", path: "/contact" },
-  ];
 
   return (
     <nav className="bg-card shadow-card border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center gap-4">
-            <Drawer>
-              <DrawerTrigger asChild>
-                <Button variant="ghost" size="sm">
-                  <Menu className="h-4 w-4" />
-                </Button>
-              </DrawerTrigger>
-              <DrawerContent className="h-full w-80 mt-0 rounded-none">
-                <AppSidebar />
-              </DrawerContent>
-            </Drawer>
-            <Link to="/" className="text-2xl font-bold text-primary">
-              MorAssist
-            </Link>
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    currentPath === item.path
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-accent hover:text-accent-foreground"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="md:hidden">
-            <Button variant="ghost" size="sm">
-              Menu
-            </Button>
-          </div>
+        <div className="flex items-center h-16 gap-4">
+          <Drawer>
+            <DrawerTrigger asChild>
+              <Button variant="ghost" size="sm">
+                <Menu className="h-4 w-4" />
+              </Button>
+            </DrawerTrigger>
+            <DrawerContent className="h-full w-80 mt-0 rounded-none">
+              <AppSidebar />
+            </DrawerContent>
+          </Drawer>
+          <Link to="/" className="text-2xl font-bold text-primary">
+            MorAssist
+          </Link>
         </div>
       </div>
     </nav>
