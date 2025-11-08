@@ -6,6 +6,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Send, Bot, User } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 interface Message {
   id: string;
@@ -163,14 +164,24 @@ const Chatbot = () => {
     <div className="min-h-screen bg-blue-50">
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-8 text-center"
+        >
           <h1 className="text-4xl font-bold text-foreground mb-4">Support Assistant</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Get instant answers about our services, pricing, and how we can help with your website project.
           </p>
-        </div>
+        </motion.div>
 
-        <Card className="shadow-card min-h-[400px] flex flex-col">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+        >
+          <Card className="shadow-card min-h-[400px] flex flex-col">
           <CardHeader className="border-b">
             <CardTitle className="text-primary flex items-center gap-2">
               <Bot className="w-6 h-6" />
@@ -269,6 +280,7 @@ const Chatbot = () => {
             </div>
           </CardContent>
         </Card>
+        </motion.div>
       </main>
     </div>
   );
