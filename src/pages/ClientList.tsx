@@ -39,6 +39,13 @@ const ClientList = () => {
       description: "Comprehensive tutoring services offering both in-person and online learning experiences, helping students achieve academic excellence through personalized instruction",
       website: "balilearning.com",
       services: ["Online Learning Platform", "Student Portal", "Scheduling System", "Progress Tracking"]
+    },
+    {
+      name: "Mor Running",
+      industry: "Sports & Retail",
+      description: "Premium running shoe retailer specializing in high-performance footwear for competitive athletes, offering expert fitting and the latest technology in athletic footwear",
+      website: "runningassist.com",
+      services: ["E-commerce Platform", "Product Catalog", "Athlete Profiles", "Performance Tracking"]
     }
   ];
 
