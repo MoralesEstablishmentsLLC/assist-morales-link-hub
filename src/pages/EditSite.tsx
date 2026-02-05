@@ -9,9 +9,10 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Edit3, Globe, Upload, Save } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-
 const EditSite = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     siteName: "",
@@ -20,16 +21,15 @@ const EditSite = () => {
     description: "",
     priority: "medium"
   });
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
       // Prepare email data for the existing email function
       const emailData = {
         name: `Edit Request - ${formData.siteName}`,
-        email: "system@editrequest.com", // System email since this is an edit request
+        email: "system@editrequest.com",
+        // System email since this is an edit request
         company: formData.siteName,
         phone: "",
         projectType: "Site Edit Request",
@@ -38,18 +38,18 @@ const EditSite = () => {
         description: `Site URL: ${formData.siteUrl}\n\nType of Changes: ${formData.requestType}\n\nPriority: ${formData.priority}\n\nDetailed Description:\n${formData.description}`,
         services: [formData.requestType]
       };
-
-      const { data, error } = await supabase.functions.invoke('send-request-email', {
+      const {
+        data,
+        error
+      } = await supabase.functions.invoke('send-request-email', {
         body: emailData
       });
-
       if (error) {
         throw error;
       }
-
       toast({
         title: "Edit Request Submitted Successfully!",
-        description: "We've received your edit request and will review it within 24 hours.",
+        description: "We've received your edit request and will review it within 24 hours."
       });
 
       // Reset form
@@ -60,34 +60,33 @@ const EditSite = () => {
         description: "",
         priority: "medium"
       });
-
     } catch (error: any) {
       console.error('Error submitting edit request:', error);
       toast({
         title: "Error Submitting Request",
         description: "There was an issue sending your request. Please try again.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
     }
   };
-
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-hero text-white">
+  return <div className="min-h-screen bg-gradient-hero text-white">
       
       {/* Content Section with Dark Background like Hero */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-hero text-white min-h-screen">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-brand-green">
               Edit Your Site
             </h1>
-            <p className="text-lg text-white/90 max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto text-brand-green">
               Welcome back! Submit changes to your existing website or request new features. 
               Our team will review and implement your updates promptly.
             </p>
@@ -146,31 +145,18 @@ const EditSite = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="siteName">Site/Project Name *</Label>
-                    <Input
-                      id="siteName"
-                      value={formData.siteName}
-                      onChange={(e) => handleInputChange("siteName", e.target.value)}
-                      placeholder="Enter your site name"
-                      required
-                    />
+                    <Input id="siteName" value={formData.siteName} onChange={e => handleInputChange("siteName", e.target.value)} placeholder="Enter your site name" required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="siteUrl">Current Site URL *</Label>
-                    <Input
-                      id="siteUrl"
-                      type="url"
-                      value={formData.siteUrl}
-                      onChange={(e) => handleInputChange("siteUrl", e.target.value)}
-                      placeholder="https://yoursite.com"
-                      required
-                    />
+                    <Input id="siteUrl" type="url" value={formData.siteUrl} onChange={e => handleInputChange("siteUrl", e.target.value)} placeholder="https://yoursite.com" required />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="requestType">Type of Changes *</Label>
-                  <Select onValueChange={(value) => handleInputChange("requestType", value)} required>
+                  <Select onValueChange={value => handleInputChange("requestType", value)} required>
                     <SelectTrigger>
                       <SelectValue placeholder="Select the type of changes needed" />
                     </SelectTrigger>
@@ -188,7 +174,7 @@ const EditSite = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="priority">Priority Level</Label>
-                  <Select onValueChange={(value) => handleInputChange("priority", value)} defaultValue="medium">
+                  <Select onValueChange={value => handleInputChange("priority", value)} defaultValue="medium">
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
@@ -217,14 +203,7 @@ const EditSite = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="description">Detailed Description *</Label>
-                  <Textarea
-                    id="description"
-                    value={formData.description}
-                    onChange={(e) => handleInputChange("description", e.target.value)}
-                    placeholder="Please describe the specific changes you'd like to make. Include any relevant details, specific pages affected, design preferences, or functionality requirements."
-                    className="min-h-32"
-                    required
-                  />
+                  <Textarea id="description" value={formData.description} onChange={e => handleInputChange("description", e.target.value)} placeholder="Please describe the specific changes you'd like to make. Include any relevant details, specific pages affected, design preferences, or functionality requirements." className="min-h-32" required />
                 </div>
 
                 <div className="bg-muted/50 p-4 rounded-lg">
@@ -237,12 +216,7 @@ const EditSite = () => {
                   </ul>
                 </div>
 
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  className="w-full bg-gradient-primary hover:opacity-90"
-                  disabled={isSubmitting}
-                >
+                <Button type="submit" size="lg" className="w-full bg-gradient-primary hover:opacity-90" disabled={isSubmitting}>
                   <Save className="w-4 h-4 mr-2" />
                   {isSubmitting ? "Submitting..." : "Submit Edit Request"}
                 </Button>
@@ -251,8 +225,6 @@ const EditSite = () => {
           </Card>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default EditSite;
