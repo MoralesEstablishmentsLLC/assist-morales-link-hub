@@ -46,6 +46,13 @@ const ClientList = () => {
       description: "Premium running shoe retailer specializing in high-performance footwear for competitive athletes, offering expert fitting and the latest technology in athletic footwear",
       website: "runningassist.com",
       services: ["E-commerce Platform", "Product Catalog", "Athlete Profiles", "Performance Tracking"]
+    },
+    {
+      name: "Elli's Full 'O Bellies",
+      industry: "Food & Restaurant",
+      description: "Authentic Mexican food bringing traditional flavors and family recipes to the 559 area, serving up delicious homestyle dishes with fresh ingredients",
+      website: "Coming Soon",
+      services: ["Online Ordering", "Menu Display", "Location & Hours", "Catering Inquiries"]
     }
   ];
 
