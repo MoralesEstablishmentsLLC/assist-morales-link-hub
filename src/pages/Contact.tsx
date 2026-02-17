@@ -14,9 +14,10 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setIsSending(true);
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     const firstName = formData.get("firstName") as string;
     const lastName = formData.get("lastName") as string;
 
@@ -26,7 +27,7 @@ const Contact = () => {
           name: `${firstName} ${lastName}`,
           email: formData.get("email") as string,
           company: "",
-          phone: formData.get("phone") as string || "",
+          phone: (formData.get("phone") as string) || "",
           projectType: formData.get("subject") as string,
           budget: "",
           timeline: "",
@@ -36,9 +37,10 @@ const Contact = () => {
       });
 
       if (error) throw error;
+      if (data && !data.success) throw new Error(data.error || "Failed to send");
 
       toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
-      e.currentTarget.reset();
+      form.reset();
     } catch (err: any) {
       toast({ title: "Failed to send", description: err.message || "Please try again later.", variant: "destructive" });
     } finally {
