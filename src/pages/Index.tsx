@@ -234,7 +234,7 @@ const Index = () => {
                 <Card className="shadow-card hover-lift glass-card">
                   <CardContent className="pt-6">
                     <Building2 className="w-12 h-12 text-brand-blue mx-auto mb-4" />
-                    <MetricsCounter end={6} label="Happy Clients" />
+                    <MetricsCounter end={7} label="Happy Clients" />
                   </CardContent>
                 </Card>
               </motion.div>
@@ -288,7 +288,7 @@ const Index = () => {
                 <Card className="shadow-card hover-lift glass-card">
                   <CardContent className="pt-6">
                     <Zap className="w-12 h-12 text-brand-orange mx-auto mb-4" />
-                    <MetricsCounter end={6} label="Businesses Served" />
+                    <MetricsCounter end={7} label="Businesses Served" />
                   </CardContent>
                 </Card>
               </motion.div>
