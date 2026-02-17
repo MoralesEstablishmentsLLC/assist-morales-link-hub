@@ -1,13 +1,49 @@
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Loader2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSending, setIsSending] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
+    setIsSending(true);
+
+    const formData = new FormData(e.currentTarget);
+    const firstName = formData.get("firstName") as string;
+    const lastName = formData.get("lastName") as string;
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-request-email", {
+        body: {
+          name: `${firstName} ${lastName}`,
+          email: formData.get("email") as string,
+          company: "",
+          phone: formData.get("phone") as string || "",
+          projectType: formData.get("subject") as string,
+          budget: "",
+          timeline: "",
+          description: formData.get("message") as string,
+          services: [],
+        },
+      });
+
+      if (error) throw error;
+
+      toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
+      e.currentTarget.reset();
+    } catch (err: any) {
+      toast({ title: "Failed to send", description: err.message || "Please try again later.", variant: "destructive" });
+    } finally {
+      setIsSending(false);
+    }
   };
   return <div className="min-h-screen bg-background">
       
@@ -31,37 +67,37 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">First Name *</Label>
-                      <Input id="firstName" required />
+                      <Input id="firstName" name="firstName" required />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName">Last Name *</Label>
-                      <Input id="lastName" required />
+                      <Input id="lastName" name="lastName" required />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="email">Email Address *</Label>
-                    <Input id="email" type="email" required />
+                    <Input id="email" name="email" type="email" required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" type="tel" />
+                    <Input id="phone" name="phone" type="tel" />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject *</Label>
-                    <Input id="subject" required />
+                    <Input id="subject" name="subject" required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Message *</Label>
-                    <Textarea id="message" placeholder="Tell us about your project or how we can help you..." className="min-h-[150px]" required />
+                    <Textarea id="message" name="message" placeholder="Tell us about your project or how we can help you..." className="min-h-[150px]" required />
                   </div>
 
-                  <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90">
-                    <Send className="w-4 h-4 mr-2" />
-                    Send Message
+                  <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90" disabled={isSending}>
+                    {isSending ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Send className="w-4 h-4 mr-2" />}
+                    {isSending ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
