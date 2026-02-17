@@ -53,6 +53,13 @@ const ClientList = () => {
       description: "Authentic Mexican food bringing traditional flavors and family recipes to the 559 area, serving up delicious homestyle dishes with fresh ingredients",
       website: "Coming Soon",
       services: ["Online Ordering", "Menu Display", "Location & Hours", "Catering Inquiries"]
+    },
+    {
+      name: "Mickeys Goods",
+      industry: "Retail & Antiques",
+      description: "Specialty retailer offering a curated selection of antique toys and vintage goods in the 559 area, bringing nostalgia and unique finds to collectors and enthusiasts",
+      website: "Coming Soon",
+      services: ["Product Catalog", "Online Storefront", "Inventory Display", "Contact Forms"]
     }
   ];
 
