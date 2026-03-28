@@ -55,7 +55,7 @@ const Chatbot = () => {
     
     // Cost and pricing
     if (message.includes('cost') || message.includes('price') || message.includes('quote') || message.includes('budget') || message.includes('how much')) {
-      return "Our pricing depends on the scope of your project. Every business is different, so we provide custom quotes based on your specific needs.\n\nTo get a personalized estimate, we recommend filling out our project request form or reaching out to us directly. We'll review your needs and get back to you within 24 hours with a tailored quote.\n\nWould you like to know more about a specific service?";
+      return "Our pricing varies based on each request — every project is unique and some can be difficult to price upfront. That said, we always set our pricing fairly and consistently across all clients.\n\nWe don't have fixed pricing tiers. Instead, we evaluate your specific needs and provide a custom quote that reflects the scope of work involved.\n\nThe best way to get a quote is to fill out our request form or reach out to us directly. We'll get back to you quickly with a fair estimate. Want to know more about any of our services?";
     }
     
     // Web development specific
