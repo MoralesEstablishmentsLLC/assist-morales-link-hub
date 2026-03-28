@@ -58,7 +58,7 @@ const ClientList = () => {
       name: "Mickeys Goods",
       industry: "Retail & Antiques",
       description: "Specialty retailer offering a curated selection of antique toys and vintage goods in the 559 area, bringing nostalgia and unique finds to collectors and enthusiasts",
-      website: "Coming Soon",
+      website: "mickeysgoods.store",
       services: ["Product Catalog", "Online Storefront", "Inventory Display", "Contact Forms"]
     }
   ];
