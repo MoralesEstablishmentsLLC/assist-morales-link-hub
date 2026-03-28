@@ -5,7 +5,7 @@ import { DrawerClose } from "@/components/ui/drawer";
 
 const navigation = [
   { name: "Home", path: "/", icon: Home },
-  { name: "Personal Resume", path: "/resume", icon: User },
+  
   { name: "Client List", path: "/clients", icon: Users },
   { name: "Explore Features", path: "/features", icon: Sparkles },
   { name: "Request", path: "/request", icon: MessageCircle },
