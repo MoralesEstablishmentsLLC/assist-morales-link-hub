@@ -47,20 +47,8 @@ const ClientList = () => {
       website: "runningassist.com",
       services: ["E-commerce Platform", "Product Catalog", "Athlete Profiles", "Performance Tracking"]
     },
-    {
-      name: "Elli's Full 'O Bellies",
-      industry: "Food & Restaurant",
-      description: "Authentic Mexican food bringing traditional flavors and family recipes to the 559 area, serving up delicious homestyle dishes with fresh ingredients",
-      website: "Coming Soon",
-      services: ["Online Ordering", "Menu Display", "Location & Hours", "Catering Inquiries"]
-    },
-    {
-      name: "Mickeys Goods",
-      industry: "Retail & Antiques",
-      description: "Specialty retailer offering a curated selection of antique toys and vintage goods in the 559 area, bringing nostalgia and unique finds to collectors and enthusiasts",
-      website: "mickeysgoods.store",
-      services: ["Product Catalog", "Online Storefront", "Inventory Display", "Contact Forms"]
-    }
+  
+ 
   ];
 
   const industries = [...new Set(clients.map(client => client.industry))];
